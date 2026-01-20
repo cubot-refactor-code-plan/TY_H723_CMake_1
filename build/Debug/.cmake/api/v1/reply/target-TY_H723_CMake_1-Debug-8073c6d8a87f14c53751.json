@@ -37,19 +37,19 @@
 			{
 				"command" : 1,
 				"file" : 1,
-				"line" : 100,
+				"line" : 101,
 				"parent" : 2
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 56,
+				"line" : 57,
 				"parent" : 0
 			},
 			{
 				"command" : 3,
 				"file" : 1,
-				"line" : 94,
+				"line" : 95,
 				"parent" : 2
 			},
 			{
@@ -157,7 +157,8 @@
 				8,
 				9,
 				10,
-				11
+				11,
+				12
 			]
 		},
 		{
@@ -236,7 +237,7 @@
 			"language" : "ASM",
 			"sourceIndexes" : 
 			[
-				12
+				13
 			]
 		},
 		{
@@ -323,7 +324,8 @@
 			},
 			"sourceIndexes" : 
 			[
-				13
+				14,
+				15
 			]
 		}
 	],
@@ -380,22 +382,22 @@
 				9,
 				10,
 				11,
-				13
+				12,
+				14,
+				15
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				12
+				13
 			]
 		},
 		{
 			"name" : "Object Libraries",
 			"sourceIndexes" : 
 			[
-				14,
-				15,
 				16,
 				17,
 				18,
@@ -419,7 +421,9 @@
 				36,
 				37,
 				38,
-				39
+				39,
+				40,
+				41
 			]
 		}
 	],
@@ -441,6 +445,12 @@
 			"backtrace" : 5,
 			"compileGroupIndex" : 0,
 			"path" : "Core/Src/adc.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 0,
+			"path" : "Core/Src/dma.c",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -507,6 +517,12 @@
 			"backtrace" : 6,
 			"compileGroupIndex" : 2,
 			"path" : "User/App/api_main.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 6,
+			"compileGroupIndex" : 2,
+			"path" : "User/Bsp/bsp_print.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
