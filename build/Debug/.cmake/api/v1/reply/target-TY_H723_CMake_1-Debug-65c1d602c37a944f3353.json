@@ -522,7 +522,7 @@
 		{
 			"backtrace" : 6,
 			"compileGroupIndex" : 2,
-			"path" : "User/Bsp/bsp_print.cpp",
+			"path" : "User/Bsp/bsp_usart.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

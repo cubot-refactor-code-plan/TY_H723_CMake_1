@@ -9,15 +9,12 @@
  * 
  */
 
-#include "bsp_uart.hpp"
+#include "bsp_usart.hpp"
 #include "usart.h"
 
-void bsp_uart_init()
-{
-}
 
 /**
- * @brief ARM_GCC UART1 串口重定向、但阻塞
+ * @brief ARM_GCC UART1 串口重定向、但阻塞 (printf)
  * 
  * @note extern "C" 的原因是，这些函数是覆盖在原来weak弱定义上的，不能被cpp进行名称修饰
  *
@@ -37,4 +34,5 @@ extern "C"
   }
 }
 
+// @TODO 环形缓冲区 双缓冲区 串口 对应的3个类 以及收发实现
 
