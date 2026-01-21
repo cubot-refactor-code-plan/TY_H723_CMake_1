@@ -1,5 +1,5 @@
 /**
- * @file bsp_uart.cpp
+ * @file bsp_usart.cpp
  * @author Rh
  * @brief 实现了串口1的串口重定向的阻塞发送。以及实现双缓冲区和环形缓冲区的DMA收发
  * @version 0.1
