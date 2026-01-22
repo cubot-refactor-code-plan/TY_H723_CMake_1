@@ -63,3 +63,43 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
 }
+
+/**
+ * @brief DMA半传输完成回调
+ * 
+ * @param hdma DMA句柄指针
+ */
+void HAL_DMA_HalfCpltCallback(DMA_HandleTypeDef *hdma)
+{
+}
+
+/**
+ * @brief DMA传输完成回调
+ * 
+ * @param hdma DMA句柄指针
+ */
+void HAL_DMA_CpltCallback(DMA_HandleTypeDef *hdma)
+{
+}
+
+/**
+ * @brief 串口接收空闲中断回调（IDLE中断）
+ * 
+ * @param huart 对应串口句柄
+ * 
+ * @note 注意：此回调需要在USART初始化时通过以下方式启用：
+ * __HAL_UART_ENABLE_IT(&huart1, UART_IT_IDLE);
+ * 并在NVIC中使能对应中断
+ */
+void HAL_UART_RxIdleCallback(UART_HandleTypeDef *huart)
+{
+  // // 1. 获取当前已接收数据长度（需配合DMA使用）
+  // uint32_t dma_counter = __HAL_DMA_GET_COUNTER(huart->hdmarx);
+  // uint32_t received_len = huart->RxXferSize - dma_counter;
+
+  // // 2. 处理接收到的完整数据帧
+  // // process_received_frame((uint8_t*)huart->pRxBuffPtr, received_len);
+
+  // // 3. 重新启动DMA接收（双缓冲模式需要特殊处理）
+  // HAL_UARTEx_ReceiveToIdle_DMA(huart, (uint8_t*)huart->pRxBuffPtr, huart->RxXferSize);
+}
