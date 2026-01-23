@@ -14,6 +14,7 @@
 #include "bsp_usart.hpp"
 
 circle_buffer<32768> userbuffer;
+bsp_usart<32768> usart1(USART1);
 
 /**
  * @brief 总初始化
