@@ -62,16 +62,19 @@ file(GLOB_RECURSE USER_SOURCES
 )
 
 # Add sources to executable
-target_sources(${CMAKE_PROJECT_NAME} PRIVATE ${USER_SOURCES})
+target_sources(${CMAKE_PROJECT_NAME} PRIVATE 
+    # Add user source
+    ${USER_SOURCES}
+)
 
 # Add include paths
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user defined include paths
-    "User/App" ,
-    "User/Bsp" ,
-    "User/Drv" ,
-    "User/Mid" ,
-    "User/Alg"
+    ./User/App
+    ./User/Bsp
+    ./User/Drv
+    ./User/Mid
+    ./User/Alg
 )
 
 # Add project symbols (macros)

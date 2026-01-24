@@ -110,7 +110,7 @@ size_t circle_buffer<BUFFER_SIZE>::write(const uint8_t *data, size_t len, RWMode
       printf("Buffer overflow! Overwriting %u bytes.\n", (unsigned int)(len - free_space));
       // 覆盖旧数据：移动 head
       size_t need_to_clear = len - free_space;
-      head                 = (head + need_to_clear) % BUFFER_SIZE;
+      head                 = (head + need_to_clear) & (BUFFER_SIZE - 1);
       is_full              = false; // 因为 head 移动了，不再满
     }
   }
@@ -119,7 +119,7 @@ size_t circle_buffer<BUFFER_SIZE>::write(const uint8_t *data, size_t len, RWMode
   for (size_t i = 0; i < len; ++i)
   {
     buffer[tail] = data[i];
-    tail         = (tail + 1) % BUFFER_SIZE;
+    tail         = (tail + 1) & (BUFFER_SIZE - 1);
   }
 
   // 更新满状态
@@ -145,7 +145,7 @@ size_t circle_buffer<BUFFER_SIZE>::read(uint8_t *data, size_t len)
   for (size_t i = 0; i < read_len; ++i)
   {
     data[i] = buffer[head];
-    head    = (head + 1) % BUFFER_SIZE; // 环形递增
+    head    = (head + 1) & (BUFFER_SIZE - 1); // 环形递增
   }
 
   // 只要读取了数据，缓冲区就不可能为满
@@ -183,7 +183,7 @@ size_t double_buffer<BUFFER_SIZE>::write(const uint8_t *data, size_t len)
     {
       if (is_busy)
       {
-        // 【核心逻辑】：如果另一半缓冲区还在发送中(busy)
+        // 如果另一半缓冲区还在发送中(busy)
         // 我们不交换缓冲区，而是直接把当前缓冲区的写指针重置
         // 这样后续的数据会从当前缓冲区的 0 位置开始覆盖旧数据
         write_pos = 0;

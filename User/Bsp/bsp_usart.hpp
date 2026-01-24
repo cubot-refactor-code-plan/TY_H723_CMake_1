@@ -158,7 +158,7 @@ public:
   void swap_buffers();
 
   /**
-   * @brief 释放缓冲区的占用，类比于互斥锁
+   * @brief 释放缓冲区的占用，类比于互斥锁的解锁，上锁需要手动在回调函数加
    * 
    */
   void release_buffer();
@@ -181,8 +181,8 @@ template <size_t RX_SIZE = 512, size_t TX_SIZE = 512>
 class bsp_usart
 {
 private:
-  size_t         rx_size;
-  UART_HandleTypeDef *instance; ///< 串口寄存器基地址
+  size_t              rx_size;
+  UART_HandleTypeDef *huart; ///< 串口寄存器基地址
 
   // 这六个指针指向不指向是构造函数干的事，因而不会占据空间
 
@@ -191,23 +191,30 @@ private:
   uint8_t (*rx_buffer_array)[RX_SIZE];      ///< 不搞缓冲区实现（可选方案）
   circle_buffer<TX_SIZE> *tx_buffer_circle; ///< 接收缓冲区指针（可切换实现）
   double_buffer<TX_SIZE> *tx_buffer_double; ///< 双缓冲区实现（可选方案）
-  uint8_t (*tx_buffer_array)[TX_SIZE];        ///< 不搞缓冲区实现（可选方案）
+  uint8_t (*tx_buffer_array)[TX_SIZE];      ///< 不搞缓冲区实现（可选方案）
 
 
 public:
   /**
    * @brief 构造函数
-   * @param usart 串口外设实例（如USART1）
+   * @param usart 串口外设实例（如huart1）
    */
-  bsp_usart(UART_HandleTypeDef *usart):instance(usart)
+  bsp_usart(UART_HandleTypeDef *usart, circle_buffer<RX_SIZE> *rx_c, double_buffer<RX_SIZE> *rx_d,
+            uint8_t (*rx_a)[RX_SIZE], circle_buffer<TX_SIZE> *tx_c, double_buffer<TX_SIZE> *tx_d,
+            uint8_t (*tx_a)[TX_SIZE])
+    : huart(usart), rx_buffer_circle(rx_c), rx_buffer_double(rx_d), rx_buffer_array(rx_a),
+      tx_buffer_circle(tx_c), tx_buffer_double(tx_d), tx_buffer_array(tx_a)
   {
-  }
+    if (rx_a != nullptr)
+    {
+      memset(*rx_buffer_array, 0, RX_SIZE);
+    }
 
-  /**
-   * @brief 初始化串口
-   * @param baud_rate 波特率（如115200）
-   */
-  void init(uint32_t baud_rate);
+    if (tx_a != nullptr)
+    {
+      memset(*tx_buffer_array, 0, TX_SIZE);
+    }
+  }
 
   /**
    * @brief 发送数据
@@ -229,7 +236,13 @@ public:
    * @brief 接收中断处理
    * @note 需在HAL_UART_RxCpltCallback中调用
    */
-  void irq_handler();
+  void receive_irq_handler();
+
+  /**
+  * @brief 接收中断处理
+  * @note 需在HAL_UART_TxCpltCallback中调用
+  */
+ void send_irq_handler();
 };
 
 #endif // __BSP_USART_H__

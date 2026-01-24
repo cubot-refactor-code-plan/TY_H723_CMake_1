@@ -76,7 +76,7 @@ HAL库也早就写好了cpp调用c的`extern "C"`内容
 
 正常cpp文件为：`xxx_yyyy.cpp` 和 `xxx_yyyy.hpp` 作为区分 用**`hpp`**
 
-xxx: app mid bsp drv alg
+`xxx为 app mid bsp drv alg`
 
 多去试试新的写法
 
