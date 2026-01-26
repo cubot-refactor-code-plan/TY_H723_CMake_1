@@ -28,6 +28,7 @@
 */
 
 #include "bsp_usart.hpp"
+#include <stdarg.h>
 #include "math.h"
 
 /**
@@ -40,16 +41,17 @@ extern "C"
 {
   int __io_putchar(int ch)
   {
-    HAL_UART_Transmit(&huart1, (uint8_t *)&ch, 1, HAL_MAX_DELAY);
+    HAL_UART_Transmit(PRINT_UART, (uint8_t *)&ch, 1, HAL_MAX_DELAY);
     return ch;
   }
 
   int _write(int fd, char *ptr, int len)
   {
-    HAL_UART_Transmit(&huart1, (uint8_t *)ptr, len, HAL_MAX_DELAY);
+    HAL_UART_Transmit(PRINT_UART, (uint8_t *)ptr, len,HAL_MAX_DELAY);
     return len;
   }
 }
+
 
 /**
  * @brief Construct a new circle buffer::circle buffer object

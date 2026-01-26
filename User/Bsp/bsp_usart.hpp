@@ -8,6 +8,12 @@
 #include "string.h"
 
 
+#define PRINT_UART &huart6
+
+
+int printf_dma(const char *fmt, ...);
+
+
 /**
  * @brief 
  * 

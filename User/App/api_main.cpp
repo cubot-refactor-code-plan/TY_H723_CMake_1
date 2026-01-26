@@ -13,8 +13,7 @@
 #include <stdio.h>
 #include "bsp_usart.hpp"
 
-circle_buffer<32768> userbuffer;
-bsp_usart<32768,32768> usart1(&huart1,nullptr,nullptr,nullptr,nullptr,nullptr,nullptr);
+int a;
 
 /**
  * @brief 总初始化
@@ -33,10 +32,8 @@ void app_while()
 {
   static int count = 0;
   count++;
-  HAL_Delay(500);
-
-  // HAL_UART_Transmit(&huart1, a, 7, 100);
-  printf("%d\n", count);
+  HAL_Delay(100);
+  a = printf_dma("%d\n", count);
 }
 
 /**
@@ -46,6 +43,10 @@ void app_while()
  */
 void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
 {
+  if(huart == PRINT_UART)
+  {
+    printf("ok\n");
+  }
 }
 
 /**
