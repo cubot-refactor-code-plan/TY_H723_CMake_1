@@ -15,7 +15,6 @@
  */
 #include "api_main.h"
 #include "main.h"
-#include <stdio.h>
 #include "bsp_usart.hpp"
 
 
