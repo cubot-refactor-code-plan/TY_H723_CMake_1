@@ -25,7 +25,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include <stdio.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -114,10 +114,13 @@ void MX_FREERTOS_Init(void) {
 void StartDefaultTask(void *argument)
 {
   /* USER CODE BEGIN StartDefaultTask */
+  int count = 0;
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+    count++;
+    printf("%d\n",count);
+    osDelay(500);
   }
   /* USER CODE END StartDefaultTask */
 }
