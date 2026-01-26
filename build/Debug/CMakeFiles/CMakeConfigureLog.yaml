@@ -5,7 +5,7 @@ events:
     kind: "message-v1"
     backtrace:
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineSystem.cmake:207 (message)"
-      - "CMakeLists.txt:28 (project)"
+      - "CMakeLists.txt:31 (project)"
     message: |
       The target system is: Generic -  - arm
       The host system is: Windows - 10.0.26100 - AMD64
@@ -13,7 +13,7 @@ events:
     kind: "find-v1"
     backtrace:
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeNinjaFindMake.cmake:5 (find_program)"
-      - "CMakeLists.txt:28 (project)"
+      - "CMakeLists.txt:31 (project)"
     mode: "program"
     variable: "CMAKE_MAKE_PROGRAM"
     description: "Program used to build from build.ninja files."
@@ -39,7 +39,7 @@ events:
       - "C:/Program Files/dotnet/"
       - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
       - "D:/texlive/2025/bin/windows/"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/"
       - "D:/Microsoft VS Code/bin/"
       - "C:/Program Files/Git/cmd/"
       - "D:/Program Files/Python313/"
@@ -57,6 +57,7 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/ctags/"
       - "D:/Users/admin/Desktop/work/Toolchain/Icarus/bin/"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/"
       - "D:/Arm_GNU/bin/"
       - "D:/MinGW/bin/"
       - "C:/Users/admin/AppData/Local/Microsoft/WindowsApps/"
@@ -150,15 +151,15 @@ events:
       - "D:/texlive/2025/bin/windows/samu.com"
       - "D:/texlive/2025/bin/windows/samu.exe"
       - "D:/texlive/2025/bin/windows/samu"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/ninja-build.com"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/ninja-build.exe"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/ninja-build"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/ninja.com"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/ninja.exe"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/ninja"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/samu.com"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/samu.exe"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/samu"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/ninja-build.com"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/ninja-build.exe"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/ninja-build"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/ninja.com"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/ninja.exe"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/ninja"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/samu.com"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/samu.exe"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/samu"
       - "D:/Microsoft VS Code/bin/ninja-build.com"
       - "D:/Microsoft VS Code/bin/ninja-build.exe"
       - "D:/Microsoft VS Code/bin/ninja-build"
@@ -302,6 +303,7 @@ events:
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\ctags"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\Icarus\\bin"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\gtkwave_gtk3_mingw64_standalone\\bin"
+        - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\JLink"
         - "D:\\Arm_GNU\\bin"
         - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
@@ -323,7 +325,7 @@ events:
     backtrace:
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCompiler.cmake:115 (find_program)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:67 (_cmake_find_compiler_path)"
-      - "CMakeLists.txt:28 (project)"
+      - "CMakeLists.txt:31 (project)"
     mode: "program"
     variable: "CMAKE_C_COMPILER_WITH_PATH"
     description: "Path to a program."
@@ -347,7 +349,7 @@ events:
       - "C:/Program Files/dotnet/"
       - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
       - "D:/texlive/2025/bin/windows/"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/"
       - "D:/Microsoft VS Code/bin/"
       - "C:/Program Files/Git/cmd/"
       - "D:/Program Files/Python313/"
@@ -365,6 +367,7 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/ctags/"
       - "D:/Users/admin/Desktop/work/Toolchain/Icarus/bin/"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/"
       - "D:/Arm_GNU/bin/"
       - "D:/MinGW/bin/"
       - "C:/Users/admin/AppData/Local/Microsoft/WindowsApps/"
@@ -404,9 +407,9 @@ events:
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc.com"
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc.exe"
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc.com"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc.exe"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc.com"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc.exe"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc.com"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc.exe"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc"
@@ -463,6 +466,7 @@ events:
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\ctags"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\Icarus\\bin"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\gtkwave_gtk3_mingw64_standalone\\bin"
+        - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\JLink"
         - "D:\\Arm_GNU\\bin"
         - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
@@ -487,7 +491,7 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:28 (project)"
+      - "CMakeLists.txt:31 (project)"
     mode: "file"
     variable: "src_in"
     description: "Path to a file."
@@ -534,6 +538,7 @@ events:
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\ctags"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\Icarus\\bin"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\gtkwave_gtk3_mingw64_standalone\\bin"
+        - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\JLink"
         - "D:\\Arm_GNU\\bin"
         - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
@@ -556,7 +561,7 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:28 (project)"
+      - "CMakeLists.txt:31 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
       Compiler: D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/arm-none-eabi-gcc.exe 
@@ -600,7 +605,7 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:28 (project)"
+      - "CMakeLists.txt:31 (project)"
     mode: "file"
     variable: "src_in"
     description: "Path to a file."
@@ -647,6 +652,7 @@ events:
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\ctags"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\Icarus\\bin"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\gtkwave_gtk3_mingw64_standalone\\bin"
+        - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\JLink"
         - "D:\\Arm_GNU\\bin"
         - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
@@ -669,7 +675,7 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:28 (project)"
+      - "CMakeLists.txt:31 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
       Compiler: D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/arm-none-eabi-gcc.exe 
@@ -683,7 +689,7 @@ events:
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
       
       The C compiler identification is GNU, found in:
-        D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.o
+        D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.o
       
   -
     kind: "find-v1"
@@ -691,7 +697,7 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:58 (__resolve_tool_path)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:28 (project)"
+      - "CMakeLists.txt:31 (project)"
     mode: "program"
     variable: "_CMAKE_TOOL_WITH_PATH"
     description: "Path to a program."
@@ -716,7 +722,7 @@ events:
       - "C:/Program Files/dotnet/"
       - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
       - "D:/texlive/2025/bin/windows/"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/"
       - "D:/Microsoft VS Code/bin/"
       - "C:/Program Files/Git/cmd/"
       - "D:/Program Files/Python313/"
@@ -733,6 +739,7 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/ctags/"
       - "D:/Users/admin/Desktop/work/Toolchain/Icarus/bin/"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/"
       - "D:/Arm_GNU/bin/"
       - "D:/MinGW/bin/"
       - "C:/Users/admin/AppData/Local/Microsoft/WindowsApps/"
@@ -777,6 +784,7 @@ events:
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\ctags"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\Icarus\\bin"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\gtkwave_gtk3_mingw64_standalone\\bin"
+        - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\JLink"
         - "D:\\Arm_GNU\\bin"
         - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
@@ -798,7 +806,7 @@ events:
     backtrace:
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:28 (project)"
+      - "CMakeLists.txt:31 (project)"
     mode: "program"
     variable: "CMAKE_AR"
     description: "Path to a program."
@@ -824,7 +832,7 @@ events:
       - "C:/Program Files/dotnet/"
       - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
       - "D:/texlive/2025/bin/windows/"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/"
       - "D:/Microsoft VS Code/bin/"
       - "C:/Program Files/Git/cmd/"
       - "D:/Program Files/Python313/"
@@ -841,6 +849,7 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/ctags/"
       - "D:/Users/admin/Desktop/work/Toolchain/Icarus/bin/"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/"
       - "D:/Arm_GNU/bin/"
       - "D:/MinGW/bin/"
       - "C:/Users/admin/AppData/Local/Microsoft/WindowsApps/"
@@ -885,6 +894,7 @@ events:
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\ctags"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\Icarus\\bin"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\gtkwave_gtk3_mingw64_standalone\\bin"
+        - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\JLink"
         - "D:\\Arm_GNU\\bin"
         - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
@@ -906,7 +916,7 @@ events:
     backtrace:
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:28 (project)"
+      - "CMakeLists.txt:31 (project)"
     mode: "program"
     variable: "CMAKE_RANLIB"
     description: "Path to a program."
@@ -932,7 +942,7 @@ events:
       - "C:/Program Files/dotnet/"
       - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
       - "D:/texlive/2025/bin/windows/"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/"
       - "D:/Microsoft VS Code/bin/"
       - "C:/Program Files/Git/cmd/"
       - "D:/Program Files/Python313/"
@@ -949,6 +959,7 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/ctags/"
       - "D:/Users/admin/Desktop/work/Toolchain/Icarus/bin/"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/"
       - "D:/Arm_GNU/bin/"
       - "D:/MinGW/bin/"
       - "C:/Users/admin/AppData/Local/Microsoft/WindowsApps/"
@@ -993,6 +1004,7 @@ events:
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\ctags"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\Icarus\\bin"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\gtkwave_gtk3_mingw64_standalone\\bin"
+        - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\JLink"
         - "D:\\Arm_GNU\\bin"
         - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
@@ -1014,7 +1026,7 @@ events:
     backtrace:
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:28 (project)"
+      - "CMakeLists.txt:31 (project)"
     mode: "program"
     variable: "CMAKE_STRIP"
     description: "Path to a program."
@@ -1040,7 +1052,7 @@ events:
       - "C:/Program Files/dotnet/"
       - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
       - "D:/texlive/2025/bin/windows/"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/"
       - "D:/Microsoft VS Code/bin/"
       - "C:/Program Files/Git/cmd/"
       - "D:/Program Files/Python313/"
@@ -1057,6 +1069,7 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/ctags/"
       - "D:/Users/admin/Desktop/work/Toolchain/Icarus/bin/"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/"
       - "D:/Arm_GNU/bin/"
       - "D:/MinGW/bin/"
       - "C:/Users/admin/AppData/Local/Microsoft/WindowsApps/"
@@ -1101,6 +1114,7 @@ events:
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\ctags"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\Icarus\\bin"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\gtkwave_gtk3_mingw64_standalone\\bin"
+        - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\JLink"
         - "D:\\Arm_GNU\\bin"
         - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
@@ -1122,7 +1136,7 @@ events:
     backtrace:
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:28 (project)"
+      - "CMakeLists.txt:31 (project)"
     mode: "program"
     variable: "CMAKE_NM"
     description: "Path to a program."
@@ -1148,7 +1162,7 @@ events:
       - "C:/Program Files/dotnet/"
       - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
       - "D:/texlive/2025/bin/windows/"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/"
       - "D:/Microsoft VS Code/bin/"
       - "C:/Program Files/Git/cmd/"
       - "D:/Program Files/Python313/"
@@ -1165,6 +1179,7 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/ctags/"
       - "D:/Users/admin/Desktop/work/Toolchain/Icarus/bin/"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/"
       - "D:/Arm_GNU/bin/"
       - "D:/MinGW/bin/"
       - "C:/Users/admin/AppData/Local/Microsoft/WindowsApps/"
@@ -1209,6 +1224,7 @@ events:
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\ctags"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\Icarus\\bin"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\gtkwave_gtk3_mingw64_standalone\\bin"
+        - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\JLink"
         - "D:\\Arm_GNU\\bin"
         - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
@@ -1230,7 +1246,7 @@ events:
     backtrace:
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:28 (project)"
+      - "CMakeLists.txt:31 (project)"
     mode: "program"
     variable: "CMAKE_OBJDUMP"
     description: "Path to a program."
@@ -1256,7 +1272,7 @@ events:
       - "C:/Program Files/dotnet/"
       - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
       - "D:/texlive/2025/bin/windows/"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/"
       - "D:/Microsoft VS Code/bin/"
       - "C:/Program Files/Git/cmd/"
       - "D:/Program Files/Python313/"
@@ -1273,6 +1289,7 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/ctags/"
       - "D:/Users/admin/Desktop/work/Toolchain/Icarus/bin/"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/"
       - "D:/Arm_GNU/bin/"
       - "D:/MinGW/bin/"
       - "C:/Users/admin/AppData/Local/Microsoft/WindowsApps/"
@@ -1317,6 +1334,7 @@ events:
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\ctags"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\Icarus\\bin"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\gtkwave_gtk3_mingw64_standalone\\bin"
+        - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\JLink"
         - "D:\\Arm_GNU\\bin"
         - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
@@ -1338,7 +1356,7 @@ events:
     backtrace:
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:28 (project)"
+      - "CMakeLists.txt:31 (project)"
     mode: "program"
     variable: "CMAKE_READELF"
     description: "Path to a program."
@@ -1364,7 +1382,7 @@ events:
       - "C:/Program Files/dotnet/"
       - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
       - "D:/texlive/2025/bin/windows/"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/"
       - "D:/Microsoft VS Code/bin/"
       - "C:/Program Files/Git/cmd/"
       - "D:/Program Files/Python313/"
@@ -1381,6 +1399,7 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/ctags/"
       - "D:/Users/admin/Desktop/work/Toolchain/Icarus/bin/"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/"
       - "D:/Arm_GNU/bin/"
       - "D:/MinGW/bin/"
       - "C:/Users/admin/AppData/Local/Microsoft/WindowsApps/"
@@ -1425,6 +1444,7 @@ events:
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\ctags"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\Icarus\\bin"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\gtkwave_gtk3_mingw64_standalone\\bin"
+        - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\JLink"
         - "D:\\Arm_GNU\\bin"
         - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
@@ -1446,7 +1466,7 @@ events:
     backtrace:
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:28 (project)"
+      - "CMakeLists.txt:31 (project)"
     mode: "program"
     variable: "CMAKE_DLLTOOL"
     description: "Path to a program."
@@ -1472,7 +1492,7 @@ events:
       - "C:/Program Files/dotnet/"
       - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
       - "D:/texlive/2025/bin/windows/"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/"
       - "D:/Microsoft VS Code/bin/"
       - "C:/Program Files/Git/cmd/"
       - "D:/Program Files/Python313/"
@@ -1489,6 +1509,7 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/ctags/"
       - "D:/Users/admin/Desktop/work/Toolchain/Icarus/bin/"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/"
       - "D:/Arm_GNU/bin/"
       - "D:/MinGW/bin/"
       - "C:/Users/admin/AppData/Local/Microsoft/WindowsApps/"
@@ -1531,9 +1552,9 @@ events:
       - "D:/texlive/2025/bin/windows/arm-none-eabi-dlltool.com"
       - "D:/texlive/2025/bin/windows/arm-none-eabi-dlltool.exe"
       - "D:/texlive/2025/bin/windows/arm-none-eabi-dlltool"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-dlltool.com"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-dlltool.exe"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-dlltool"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-dlltool.com"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-dlltool.exe"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-dlltool"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-dlltool.com"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-dlltool.exe"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-dlltool"
@@ -1582,6 +1603,9 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-dlltool.com"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-dlltool.exe"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-dlltool"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-dlltool.com"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-dlltool.exe"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-dlltool"
       - "D:/Arm_GNU/bin/arm-none-eabi-dlltool.com"
       - "D:/Arm_GNU/bin/arm-none-eabi-dlltool.exe"
       - "D:/Arm_GNU/bin/arm-none-eabi-dlltool"
@@ -1645,9 +1669,9 @@ events:
       - "D:/texlive/2025/bin/windows/dlltool.com"
       - "D:/texlive/2025/bin/windows/dlltool.exe"
       - "D:/texlive/2025/bin/windows/dlltool"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/dlltool.com"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/dlltool.exe"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/dlltool"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/dlltool.com"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/dlltool.exe"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/dlltool"
       - "D:/Microsoft VS Code/bin/dlltool.com"
       - "D:/Microsoft VS Code/bin/dlltool.exe"
       - "D:/Microsoft VS Code/bin/dlltool"
@@ -1701,6 +1725,7 @@ events:
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\ctags"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\Icarus\\bin"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\gtkwave_gtk3_mingw64_standalone\\bin"
+        - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\JLink"
         - "D:\\Arm_GNU\\bin"
         - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
@@ -1722,7 +1747,7 @@ events:
     backtrace:
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:28 (project)"
+      - "CMakeLists.txt:31 (project)"
     mode: "program"
     variable: "CMAKE_ADDR2LINE"
     description: "Path to a program."
@@ -1748,7 +1773,7 @@ events:
       - "C:/Program Files/dotnet/"
       - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
       - "D:/texlive/2025/bin/windows/"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/"
       - "D:/Microsoft VS Code/bin/"
       - "C:/Program Files/Git/cmd/"
       - "D:/Program Files/Python313/"
@@ -1765,6 +1790,7 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/ctags/"
       - "D:/Users/admin/Desktop/work/Toolchain/Icarus/bin/"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/"
       - "D:/Arm_GNU/bin/"
       - "D:/MinGW/bin/"
       - "C:/Users/admin/AppData/Local/Microsoft/WindowsApps/"
@@ -1809,6 +1835,7 @@ events:
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\ctags"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\Icarus\\bin"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\gtkwave_gtk3_mingw64_standalone\\bin"
+        - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\JLink"
         - "D:\\Arm_GNU\\bin"
         - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
@@ -1830,7 +1857,7 @@ events:
     backtrace:
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:28 (project)"
+      - "CMakeLists.txt:31 (project)"
     mode: "program"
     variable: "CMAKE_TAPI"
     description: "Path to a program."
@@ -1856,7 +1883,7 @@ events:
       - "C:/Program Files/dotnet/"
       - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
       - "D:/texlive/2025/bin/windows/"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/"
       - "D:/Microsoft VS Code/bin/"
       - "C:/Program Files/Git/cmd/"
       - "D:/Program Files/Python313/"
@@ -1873,6 +1900,7 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/ctags/"
       - "D:/Users/admin/Desktop/work/Toolchain/Icarus/bin/"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/"
       - "D:/Arm_GNU/bin/"
       - "D:/MinGW/bin/"
       - "C:/Users/admin/AppData/Local/Microsoft/WindowsApps/"
@@ -1915,9 +1943,9 @@ events:
       - "D:/texlive/2025/bin/windows/arm-none-eabi-tapi.com"
       - "D:/texlive/2025/bin/windows/arm-none-eabi-tapi.exe"
       - "D:/texlive/2025/bin/windows/arm-none-eabi-tapi"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-tapi.com"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-tapi.exe"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-tapi"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-tapi.com"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-tapi.exe"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-tapi"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-tapi.com"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-tapi.exe"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-tapi"
@@ -1966,6 +1994,9 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-tapi.com"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-tapi.exe"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-tapi"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-tapi.com"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-tapi.exe"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-tapi"
       - "D:/Arm_GNU/bin/arm-none-eabi-tapi.com"
       - "D:/Arm_GNU/bin/arm-none-eabi-tapi.exe"
       - "D:/Arm_GNU/bin/arm-none-eabi-tapi"
@@ -2029,9 +2060,9 @@ events:
       - "D:/texlive/2025/bin/windows/tapi.com"
       - "D:/texlive/2025/bin/windows/tapi.exe"
       - "D:/texlive/2025/bin/windows/tapi"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/tapi.com"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/tapi.exe"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/tapi"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/tapi.com"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/tapi.exe"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/tapi"
       - "D:/Microsoft VS Code/bin/tapi.com"
       - "D:/Microsoft VS Code/bin/tapi.exe"
       - "D:/Microsoft VS Code/bin/tapi"
@@ -2080,6 +2111,9 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/tapi.com"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/tapi.exe"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/tapi"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/tapi.com"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/tapi.exe"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/tapi"
       - "D:/Arm_GNU/bin/tapi.com"
       - "D:/Arm_GNU/bin/tapi.exe"
       - "D:/Arm_GNU/bin/tapi"
@@ -2144,6 +2178,7 @@ events:
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\ctags"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\Icarus\\bin"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\gtkwave_gtk3_mingw64_standalone\\bin"
+        - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\JLink"
         - "D:\\Arm_GNU\\bin"
         - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
@@ -2165,7 +2200,7 @@ events:
     backtrace:
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
-      - "CMakeLists.txt:28 (project)"
+      - "CMakeLists.txt:31 (project)"
     mode: "program"
     variable: "CMAKE_C_COMPILER_AR"
     description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
@@ -2193,7 +2228,7 @@ events:
       - "C:/Program Files/dotnet/"
       - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
       - "D:/texlive/2025/bin/windows/"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/"
       - "D:/Microsoft VS Code/bin/"
       - "C:/Program Files/Git/cmd/"
       - "D:/Program Files/Python313/"
@@ -2210,6 +2245,7 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/ctags/"
       - "D:/Users/admin/Desktop/work/Toolchain/Icarus/bin/"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/"
       - "D:/Arm_GNU/bin/"
       - "D:/MinGW/bin/"
       - "C:/Users/admin/AppData/Local/Microsoft/WindowsApps/"
@@ -2252,9 +2288,9 @@ events:
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ar-14.3.com"
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ar-14.3.exe"
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ar-14.3"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar-14.3.com"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar-14.3.exe"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar-14.3"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar-14.3.com"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar-14.3.exe"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar-14.3"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-14.3.com"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-14.3.exe"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-14.3"
@@ -2303,6 +2339,9 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ar-14.3.com"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ar-14.3.exe"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ar-14.3"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ar-14.3.com"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ar-14.3.exe"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ar-14.3"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ar-14.3.com"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ar-14.3.exe"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ar-14.3"
@@ -2366,9 +2405,9 @@ events:
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ar-14.com"
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ar-14.exe"
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ar-14"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar-14.com"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar-14.exe"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar-14"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar-14.com"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar-14.exe"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar-14"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-14.com"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-14.exe"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-14"
@@ -2417,6 +2456,9 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ar-14.com"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ar-14.exe"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ar-14"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ar-14.com"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ar-14.exe"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ar-14"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ar-14.com"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ar-14.exe"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ar-14"
@@ -2480,9 +2522,9 @@ events:
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ar14.com"
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ar14.exe"
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ar14"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar14.com"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar14.exe"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar14"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar14.com"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar14.exe"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar14"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ar14.com"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ar14.exe"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ar14"
@@ -2531,6 +2573,9 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ar14.com"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ar14.exe"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ar14"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ar14.com"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ar14.exe"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ar14"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ar14.com"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ar14.exe"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ar14"
@@ -2596,6 +2641,7 @@ events:
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\ctags"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\Icarus\\bin"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\gtkwave_gtk3_mingw64_standalone\\bin"
+        - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\JLink"
         - "D:\\Arm_GNU\\bin"
         - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
@@ -2617,7 +2663,7 @@ events:
     backtrace:
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
-      - "CMakeLists.txt:28 (project)"
+      - "CMakeLists.txt:31 (project)"
     mode: "program"
     variable: "CMAKE_C_COMPILER_RANLIB"
     description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
@@ -2645,7 +2691,7 @@ events:
       - "C:/Program Files/dotnet/"
       - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
       - "D:/texlive/2025/bin/windows/"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/"
       - "D:/Microsoft VS Code/bin/"
       - "C:/Program Files/Git/cmd/"
       - "D:/Program Files/Python313/"
@@ -2662,6 +2708,7 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/ctags/"
       - "D:/Users/admin/Desktop/work/Toolchain/Icarus/bin/"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/"
       - "D:/Arm_GNU/bin/"
       - "D:/MinGW/bin/"
       - "C:/Users/admin/AppData/Local/Microsoft/WindowsApps/"
@@ -2704,9 +2751,9 @@ events:
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ranlib-14.3.com"
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ranlib-14.3.exe"
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ranlib-14.3"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib-14.3.com"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib-14.3.exe"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib-14.3"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib-14.3"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-14.3.com"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-14.3.exe"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-14.3"
@@ -2755,6 +2802,9 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ranlib-14.3.com"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ranlib-14.3.exe"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ranlib-14.3"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ranlib-14.3"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ranlib-14.3.com"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ranlib-14.3.exe"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ranlib-14.3"
@@ -2818,9 +2868,9 @@ events:
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ranlib-14.com"
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ranlib-14.exe"
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ranlib-14"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib-14.com"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib-14.exe"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib-14"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib-14.com"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib-14.exe"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib-14"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-14.com"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-14.exe"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-14"
@@ -2869,6 +2919,9 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ranlib-14.com"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ranlib-14.exe"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ranlib-14"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ranlib-14.com"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ranlib-14.exe"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ranlib-14"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ranlib-14.com"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ranlib-14.exe"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ranlib-14"
@@ -2932,9 +2985,9 @@ events:
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ranlib14.com"
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ranlib14.exe"
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ranlib14"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib14.com"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib14.exe"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib14"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib14.com"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib14.exe"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib14"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib14.com"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib14.exe"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib14"
@@ -2983,6 +3036,9 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ranlib14.com"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ranlib14.exe"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ranlib14"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ranlib14.com"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ranlib14.exe"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ranlib14"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ranlib14.com"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ranlib14.exe"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ranlib14"
@@ -3048,6 +3104,7 @@ events:
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\ctags"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\Icarus\\bin"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\gtkwave_gtk3_mingw64_standalone\\bin"
+        - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\JLink"
         - "D:\\Arm_GNU\\bin"
         - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
@@ -3069,7 +3126,7 @@ events:
     backtrace:
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCompiler.cmake:115 (find_program)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:71 (_cmake_find_compiler_path)"
-      - "CMakeLists.txt:28 (project)"
+      - "CMakeLists.txt:31 (project)"
     mode: "program"
     variable: "CMAKE_CXX_COMPILER_WITH_PATH"
     description: "Path to a program."
@@ -3093,7 +3150,7 @@ events:
       - "C:/Program Files/dotnet/"
       - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
       - "D:/texlive/2025/bin/windows/"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/"
       - "D:/Microsoft VS Code/bin/"
       - "C:/Program Files/Git/cmd/"
       - "D:/Program Files/Python313/"
@@ -3111,6 +3168,7 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/ctags/"
       - "D:/Users/admin/Desktop/work/Toolchain/Icarus/bin/"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/"
       - "D:/Arm_GNU/bin/"
       - "D:/MinGW/bin/"
       - "C:/Users/admin/AppData/Local/Microsoft/WindowsApps/"
@@ -3150,9 +3208,9 @@ events:
       - "D:/texlive/2025/bin/windows/arm-none-eabi-g++.com"
       - "D:/texlive/2025/bin/windows/arm-none-eabi-g++.exe"
       - "D:/texlive/2025/bin/windows/arm-none-eabi-g++"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-g++.com"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-g++.exe"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-g++"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-g++.com"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-g++.exe"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-g++"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-g++.com"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-g++.exe"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-g++"
@@ -3209,6 +3267,7 @@ events:
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\ctags"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\Icarus\\bin"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\gtkwave_gtk3_mingw64_standalone\\bin"
+        - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\JLink"
         - "D:\\Arm_GNU\\bin"
         - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
@@ -3233,7 +3292,7 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:28 (project)"
+      - "CMakeLists.txt:31 (project)"
     mode: "file"
     variable: "src_in"
     description: "Path to a file."
@@ -3280,6 +3339,7 @@ events:
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\ctags"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\Icarus\\bin"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\gtkwave_gtk3_mingw64_standalone\\bin"
+        - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\JLink"
         - "D:\\Arm_GNU\\bin"
         - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
@@ -3302,7 +3362,7 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:28 (project)"
+      - "CMakeLists.txt:31 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
       Compiler: D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/arm-none-eabi-g++.exe 
@@ -3346,7 +3406,7 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:28 (project)"
+      - "CMakeLists.txt:31 (project)"
     mode: "file"
     variable: "src_in"
     description: "Path to a file."
@@ -3393,6 +3453,7 @@ events:
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\ctags"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\Icarus\\bin"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\gtkwave_gtk3_mingw64_standalone\\bin"
+        - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\JLink"
         - "D:\\Arm_GNU\\bin"
         - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
@@ -3415,7 +3476,7 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:28 (project)"
+      - "CMakeLists.txt:31 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
       Compiler: D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/arm-none-eabi-g++.exe 
@@ -3429,14 +3490,14 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
       
       The CXX compiler identification is GNU, found in:
-        D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.o
+        D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.o
       
   -
     kind: "find-v1"
     backtrace:
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
-      - "CMakeLists.txt:28 (project)"
+      - "CMakeLists.txt:31 (project)"
     mode: "program"
     variable: "CMAKE_CXX_COMPILER_AR"
     description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
@@ -3464,7 +3525,7 @@ events:
       - "C:/Program Files/dotnet/"
       - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
       - "D:/texlive/2025/bin/windows/"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/"
       - "D:/Microsoft VS Code/bin/"
       - "C:/Program Files/Git/cmd/"
       - "D:/Program Files/Python313/"
@@ -3481,6 +3542,7 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/ctags/"
       - "D:/Users/admin/Desktop/work/Toolchain/Icarus/bin/"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/"
       - "D:/Arm_GNU/bin/"
       - "D:/MinGW/bin/"
       - "C:/Users/admin/AppData/Local/Microsoft/WindowsApps/"
@@ -3523,9 +3585,9 @@ events:
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ar-14.3.com"
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ar-14.3.exe"
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ar-14.3"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar-14.3.com"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar-14.3.exe"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar-14.3"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar-14.3.com"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar-14.3.exe"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar-14.3"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-14.3.com"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-14.3.exe"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-14.3"
@@ -3574,6 +3636,9 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ar-14.3.com"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ar-14.3.exe"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ar-14.3"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ar-14.3.com"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ar-14.3.exe"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ar-14.3"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ar-14.3.com"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ar-14.3.exe"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ar-14.3"
@@ -3637,9 +3702,9 @@ events:
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ar-14.com"
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ar-14.exe"
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ar-14"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar-14.com"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar-14.exe"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar-14"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar-14.com"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar-14.exe"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar-14"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-14.com"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-14.exe"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-14"
@@ -3688,6 +3753,9 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ar-14.com"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ar-14.exe"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ar-14"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ar-14.com"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ar-14.exe"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ar-14"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ar-14.com"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ar-14.exe"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ar-14"
@@ -3751,9 +3819,9 @@ events:
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ar14.com"
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ar14.exe"
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ar14"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar14.com"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar14.exe"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar14"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar14.com"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar14.exe"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar14"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ar14.com"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ar14.exe"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ar14"
@@ -3802,6 +3870,9 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ar14.com"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ar14.exe"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ar14"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ar14.com"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ar14.exe"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ar14"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ar14.com"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ar14.exe"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ar14"
@@ -3867,6 +3938,7 @@ events:
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\ctags"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\Icarus\\bin"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\gtkwave_gtk3_mingw64_standalone\\bin"
+        - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\JLink"
         - "D:\\Arm_GNU\\bin"
         - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
@@ -3888,7 +3960,7 @@ events:
     backtrace:
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
-      - "CMakeLists.txt:28 (project)"
+      - "CMakeLists.txt:31 (project)"
     mode: "program"
     variable: "CMAKE_CXX_COMPILER_RANLIB"
     description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
@@ -3916,7 +3988,7 @@ events:
       - "C:/Program Files/dotnet/"
       - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
       - "D:/texlive/2025/bin/windows/"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/"
       - "D:/Microsoft VS Code/bin/"
       - "C:/Program Files/Git/cmd/"
       - "D:/Program Files/Python313/"
@@ -3933,6 +4005,7 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/ctags/"
       - "D:/Users/admin/Desktop/work/Toolchain/Icarus/bin/"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/"
       - "D:/Arm_GNU/bin/"
       - "D:/MinGW/bin/"
       - "C:/Users/admin/AppData/Local/Microsoft/WindowsApps/"
@@ -3975,9 +4048,9 @@ events:
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ranlib-14.3.com"
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ranlib-14.3.exe"
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ranlib-14.3"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib-14.3.com"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib-14.3.exe"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib-14.3"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib-14.3"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-14.3.com"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-14.3.exe"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-14.3"
@@ -4026,6 +4099,9 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ranlib-14.3.com"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ranlib-14.3.exe"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ranlib-14.3"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ranlib-14.3"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ranlib-14.3.com"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ranlib-14.3.exe"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ranlib-14.3"
@@ -4089,9 +4165,9 @@ events:
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ranlib-14.com"
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ranlib-14.exe"
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ranlib-14"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib-14.com"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib-14.exe"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib-14"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib-14.com"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib-14.exe"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib-14"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-14.com"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-14.exe"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-14"
@@ -4140,6 +4216,9 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ranlib-14.com"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ranlib-14.exe"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ranlib-14"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ranlib-14.com"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ranlib-14.exe"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ranlib-14"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ranlib-14.com"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ranlib-14.exe"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ranlib-14"
@@ -4203,9 +4282,9 @@ events:
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ranlib14.com"
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ranlib14.exe"
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ranlib14"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib14.com"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib14.exe"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib14"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib14.com"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib14.exe"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib14"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib14.com"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib14.exe"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib14"
@@ -4254,6 +4333,9 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ranlib14.com"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ranlib14.exe"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ranlib14"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ranlib14.com"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ranlib14.exe"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ranlib14"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ranlib14.com"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ranlib14.exe"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ranlib14"
@@ -4319,6 +4401,7 @@ events:
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\ctags"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\Icarus\\bin"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\gtkwave_gtk3_mingw64_standalone\\bin"
+        - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\JLink"
         - "D:\\Arm_GNU\\bin"
         - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
@@ -4340,24 +4423,24 @@ events:
     backtrace:
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:28 (project)"
+      - "CMakeLists.txt:31 (project)"
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/CMakeFiles/CMakeScratch/TryCompile-m8asvz"
-      binary: "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/CMakeFiles/CMakeScratch/TryCompile-m8asvz"
+      source: "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/CMakeFiles/CMakeScratch/TryCompile-e8gi70"
+      binary: "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/CMakeFiles/CMakeScratch/TryCompile-e8gi70"
     cmakeVariables:
       CMAKE_C_FLAGS: " -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections"
       CMAKE_C_FLAGS_DEBUG: "-O0 -g3"
-      CMAKE_EXE_LINKER_FLAGS: "-mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -T \"D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/STM32H723XG_FLASH.ld\" --specs=nano.specs -Wl,-Map=TY_H723_CMake_1.map -Wl,--gc-sections -Wl,--print-memory-usage"
+      CMAKE_EXE_LINKER_FLAGS: "-mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -T \"D:/Users/admin/Desktop/26/TY_H723_CMake_1/STM32H723XG_FLASH.ld\" --specs=nano.specs -Wl,-Map=TY_H723_CMake_1.map -Wl,--gc-sections -Wl,--print-memory-usage"
     buildResult:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/CMakeFiles/CMakeScratch/TryCompile-m8asvz'
+        Change Dir: 'D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/CMakeFiles/CMakeScratch/TryCompile-e8gi70'
         
-        Run Build Command(s): D:/Users/admin/Desktop/work/Toolchain/ninja/ninja.exe -v cmTC_2405c
-        [1/2] D:\\Users\\admin\\Desktop\\work\\Toolchain\\arm-gnu-toolchain-14.3.rel1\\bin\\arm-none-eabi-gcc.exe   -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections  -std=gnu11   -v -o CMakeFiles/cmTC_2405c.dir/CMakeCCompilerABI.c.obj -c D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): D:/Users/admin/Desktop/work/Toolchain/ninja/ninja.exe -v cmTC_ba581
+        [1/2] D:\\Users\\admin\\Desktop\\work\\Toolchain\\arm-gnu-toolchain-14.3.rel1\\bin\\arm-none-eabi-gcc.exe   -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections  -std=gnu11   -v -o CMakeFiles/cmTC_ba581.dir/CMakeCCompilerABI.c.obj -c D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeCCompilerABI.c
         Using built-in specs.
         COLLECT_GCC=D:\\Users\\admin\\Desktop\\work\\Toolchain\\arm-gnu-toolchain-14.3.rel1\\bin\\arm-none-eabi-gcc.exe
         Target: arm-none-eabi
@@ -4365,8 +4448,8 @@ events:
         Thread model: single
         Supported LTO compression algorithms: zlib
         gcc version 14.3.1 20250623 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 
-        COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_2405c.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp' '-dumpdir' 'CMakeFiles/cmTC_2405c.dir/'
-         D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1.exe -quiet -v -imultilib thumb/v7e-m+dp/hard -iprefix D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../arm-none-eabi -D__USES_INITFINI__ D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_2405c.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mfpu=fpv5-d16 -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp.dp -march=armv7e-m+fp.dp -Wall -std=gnu11 -version -fdata-sections -ffunction-sections -o C:\\Users\\admin\\AppData\\Local\\Temp\\ccUMj0rt.s
+        COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_ba581.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp' '-dumpdir' 'CMakeFiles/cmTC_ba581.dir/'
+         D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1.exe -quiet -v -imultilib thumb/v7e-m+dp/hard -iprefix D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../arm-none-eabi -D__USES_INITFINI__ D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_ba581.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mfpu=fpv5-d16 -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp.dp -march=armv7e-m+fp.dp -Wall -std=gnu11 -version -fdata-sections -ffunction-sections -o C:\\Users\\admin\\AppData\\Local\\Temp\\ccSbsxRe.s
         GNU C11 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) version 14.3.1 20250623 (arm-none-eabi)
         	compiled by GNU C version 10-win32 20220113, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
         
@@ -4383,13 +4466,13 @@ events:
          D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include
         End of search list.
         Compiler executable checksum: b7d3e61a3c100ce920bcfa732511112e
-        COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_2405c.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp' '-dumpdir' 'CMakeFiles/cmTC_2405c.dir/'
-         D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv7e-m+fp.dp -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv5-d16 -mfpu=fpv5-d16 -meabi=5 -o CMakeFiles/cmTC_2405c.dir/CMakeCCompilerABI.c.obj C:\\Users\\admin\\AppData\\Local\\Temp\\ccUMj0rt.s
+        COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_ba581.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp' '-dumpdir' 'CMakeFiles/cmTC_ba581.dir/'
+         D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv7e-m+fp.dp -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv5-d16 -mfpu=fpv5-d16 -meabi=5 -o CMakeFiles/cmTC_ba581.dir/CMakeCCompilerABI.c.obj C:\\Users\\admin\\AppData\\Local\\Temp\\ccSbsxRe.s
         GNU assembler version 2.44.0 (arm-none-eabi) using BFD version (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 2.44.0.20250616
         COMPILER_PATH=D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../libexec/gcc/arm-none-eabi/14.3.1/;D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../libexec/gcc/;D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/
         LIBRARY_PATH=D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+dp/hard/;D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/;D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../arm-none-eabi/lib/thumb/v7e-m+dp/hard/;D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/;D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../lib/gcc/;D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/;D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_2405c.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp' '-dumpdir' 'CMakeFiles/cmTC_2405c.dir/CMakeCCompilerABI.c.'
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && D:\\Users\\admin\\Desktop\\work\\Toolchain\\cmake-4.1.2\\bin\\cmake.exe -E rm -f libcmTC_2405c.a && D:\\Users\\admin\\Desktop\\work\\Toolchain\\arm-gnu-toolchain-14.3.rel1\\bin\\arm-none-eabi-ar.exe qc libcmTC_2405c.a  CMakeFiles/cmTC_2405c.dir/CMakeCCompilerABI.c.obj && D:\\Users\\admin\\Desktop\\work\\Toolchain\\arm-gnu-toolchain-14.3.rel1\\bin\\arm-none-eabi-ranlib.exe libcmTC_2405c.a && cd ."
+        COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_ba581.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp' '-dumpdir' 'CMakeFiles/cmTC_ba581.dir/CMakeCCompilerABI.c.'
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && D:\\Users\\admin\\Desktop\\work\\Toolchain\\cmake-4.1.2\\bin\\cmake.exe -E rm -f libcmTC_ba581.a && D:\\Users\\admin\\Desktop\\work\\Toolchain\\arm-gnu-toolchain-14.3.rel1\\bin\\arm-none-eabi-ar.exe qc libcmTC_ba581.a  CMakeFiles/cmTC_ba581.dir/CMakeCCompilerABI.c.obj && D:\\Users\\admin\\Desktop\\work\\Toolchain\\arm-gnu-toolchain-14.3.rel1\\bin\\arm-none-eabi-ranlib.exe libcmTC_ba581.a && cd ."
         Active code page: 65001
         
       exitCode: 0
@@ -4398,7 +4481,7 @@ events:
     backtrace:
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:28 (project)"
+      - "CMakeLists.txt:31 (project)"
     message: |
       Parsed C implicit include dir info: rv=done
         found start of include info
@@ -4418,15 +4501,15 @@ events:
     backtrace:
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:28 (project)"
+      - "CMakeLists.txt:31 (project)"
     message: |
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(arm-none-eabi-g\\+\\+\\.exe|;ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(arm-none-eabi-g\\+\\+\\.exe|;ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: 'D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/CMakeFiles/CMakeScratch/TryCompile-m8asvz']
+        ignore line: [Change Dir: 'D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/CMakeFiles/CMakeScratch/TryCompile-e8gi70']
         ignore line: []
-        ignore line: [Run Build Command(s): D:/Users/admin/Desktop/work/Toolchain/ninja/ninja.exe -v cmTC_2405c]
-        ignore line: [[1/2] D:\\Users\\admin\\Desktop\\work\\Toolchain\\arm-gnu-toolchain-14.3.rel1\\bin\\arm-none-eabi-gcc.exe   -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections  -std=gnu11   -v -o CMakeFiles/cmTC_2405c.dir/CMakeCCompilerABI.c.obj -c D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): D:/Users/admin/Desktop/work/Toolchain/ninja/ninja.exe -v cmTC_ba581]
+        ignore line: [[1/2] D:\\Users\\admin\\Desktop\\work\\Toolchain\\arm-gnu-toolchain-14.3.rel1\\bin\\arm-none-eabi-gcc.exe   -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections  -std=gnu11   -v -o CMakeFiles/cmTC_ba581.dir/CMakeCCompilerABI.c.obj -c D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeCCompilerABI.c]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=D:\\Users\\admin\\Desktop\\work\\Toolchain\\arm-gnu-toolchain-14.3.rel1\\bin\\arm-none-eabi-gcc.exe]
         ignore line: [Target: arm-none-eabi]
@@ -4434,8 +4517,8 @@ events:
         ignore line: [Thread model: single]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 14.3.1 20250623 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_2405c.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp' '-dumpdir' 'CMakeFiles/cmTC_2405c.dir/']
-        ignore line: [ D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1.exe -quiet -v -imultilib thumb/v7e-m+dp/hard -iprefix D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../arm-none-eabi -D__USES_INITFINI__ D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_2405c.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mfpu=fpv5-d16 -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp.dp -march=armv7e-m+fp.dp -Wall -std=gnu11 -version -fdata-sections -ffunction-sections -o C:\\Users\\admin\\AppData\\Local\\Temp\\ccUMj0rt.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_ba581.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp' '-dumpdir' 'CMakeFiles/cmTC_ba581.dir/']
+        ignore line: [ D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1.exe -quiet -v -imultilib thumb/v7e-m+dp/hard -iprefix D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../arm-none-eabi -D__USES_INITFINI__ D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_ba581.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mfpu=fpv5-d16 -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp.dp -march=armv7e-m+fp.dp -Wall -std=gnu11 -version -fdata-sections -ffunction-sections -o C:\\Users\\admin\\AppData\\Local\\Temp\\ccSbsxRe.s]
         ignore line: [GNU C11 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) version 14.3.1 20250623 (arm-none-eabi)]
         ignore line: [	compiled by GNU C version 10-win32 20220113  GMP version 6.2.1  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.15-1-g835ea3a-GMP]
         ignore line: []
@@ -4452,8 +4535,8 @@ events:
         ignore line: [ D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: b7d3e61a3c100ce920bcfa732511112e]
-        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_2405c.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp' '-dumpdir' 'CMakeFiles/cmTC_2405c.dir/']
-        ignore line: [ D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv7e-m+fp.dp -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv5-d16 -mfpu=fpv5-d16 -meabi=5 -o CMakeFiles/cmTC_2405c.dir/CMakeCCompilerABI.c.obj C:\\Users\\admin\\AppData\\Local\\Temp\\ccUMj0rt.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_ba581.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp' '-dumpdir' 'CMakeFiles/cmTC_ba581.dir/']
+        ignore line: [ D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv7e-m+fp.dp -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv5-d16 -mfpu=fpv5-d16 -meabi=5 -o CMakeFiles/cmTC_ba581.dir/CMakeCCompilerABI.c.obj C:\\Users\\admin\\AppData\\Local\\Temp\\ccSbsxRe.s]
         ignore line: [GNU assembler version 2.44.0 (arm-none-eabi) using BFD version (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 2.44.0.20250616]
         ignore line: [COMPILER_PATH=D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../libexec/gcc/arm-none-eabi/14.3.1/]
         ignore line: [D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../libexec/gcc/]
@@ -4465,8 +4548,8 @@ events:
         ignore line: [D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../lib/gcc/]
         ignore line: [D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/]
         ignore line: [D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_2405c.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp' '-dumpdir' 'CMakeFiles/cmTC_2405c.dir/CMakeCCompilerABI.c.']
-        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && D:\\Users\\admin\\Desktop\\work\\Toolchain\\cmake-4.1.2\\bin\\cmake.exe -E rm -f libcmTC_2405c.a && D:\\Users\\admin\\Desktop\\work\\Toolchain\\arm-gnu-toolchain-14.3.rel1\\bin\\arm-none-eabi-ar.exe qc libcmTC_2405c.a  CMakeFiles/cmTC_2405c.dir/CMakeCCompilerABI.c.obj && D:\\Users\\admin\\Desktop\\work\\Toolchain\\arm-gnu-toolchain-14.3.rel1\\bin\\arm-none-eabi-ranlib.exe libcmTC_2405c.a && cd ."]
+        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_ba581.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp' '-dumpdir' 'CMakeFiles/cmTC_ba581.dir/CMakeCCompilerABI.c.']
+        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && D:\\Users\\admin\\Desktop\\work\\Toolchain\\cmake-4.1.2\\bin\\cmake.exe -E rm -f libcmTC_ba581.a && D:\\Users\\admin\\Desktop\\work\\Toolchain\\arm-gnu-toolchain-14.3.rel1\\bin\\arm-none-eabi-ar.exe qc libcmTC_ba581.a  CMakeFiles/cmTC_ba581.dir/CMakeCCompilerABI.c.obj && D:\\Users\\admin\\Desktop\\work\\Toolchain\\arm-gnu-toolchain-14.3.rel1\\bin\\arm-none-eabi-ranlib.exe libcmTC_ba581.a && cd ."]
         ignore line: [Active code page: 65001]
         ignore line: []
         ignore line: []
@@ -4481,25 +4564,25 @@ events:
     backtrace:
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:28 (project)"
+      - "CMakeLists.txt:31 (project)"
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/CMakeFiles/CMakeScratch/TryCompile-u0waoe"
-      binary: "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/CMakeFiles/CMakeScratch/TryCompile-u0waoe"
+      source: "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/CMakeFiles/CMakeScratch/TryCompile-4qeamt"
+      binary: "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/CMakeFiles/CMakeScratch/TryCompile-4qeamt"
     cmakeVariables:
       CMAKE_CXX_FLAGS: " -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics"
       CMAKE_CXX_FLAGS_DEBUG: "-O0 -g3"
       CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
-      CMAKE_EXE_LINKER_FLAGS: "-mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -T \"D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/STM32H723XG_FLASH.ld\" --specs=nano.specs -Wl,-Map=TY_H723_CMake_1.map -Wl,--gc-sections -Wl,--print-memory-usage"
+      CMAKE_EXE_LINKER_FLAGS: "-mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -T \"D:/Users/admin/Desktop/26/TY_H723_CMake_1/STM32H723XG_FLASH.ld\" --specs=nano.specs -Wl,-Map=TY_H723_CMake_1.map -Wl,--gc-sections -Wl,--print-memory-usage"
     buildResult:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/CMakeFiles/CMakeScratch/TryCompile-u0waoe'
+        Change Dir: 'D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/CMakeFiles/CMakeScratch/TryCompile-4qeamt'
         
-        Run Build Command(s): D:/Users/admin/Desktop/work/Toolchain/ninja/ninja.exe -v cmTC_8d765
-        [1/2] D:\\Users\\admin\\Desktop\\work\\Toolchain\\arm-gnu-toolchain-14.3.rel1\\bin\\arm-none-eabi-g++.exe   -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics    -v -o CMakeFiles/cmTC_8d765.dir/CMakeCXXCompilerABI.cpp.obj -c D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): D:/Users/admin/Desktop/work/Toolchain/ninja/ninja.exe -v cmTC_4a15b
+        [1/2] D:\\Users\\admin\\Desktop\\work\\Toolchain\\arm-gnu-toolchain-14.3.rel1\\bin\\arm-none-eabi-g++.exe   -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics  -std=gnu++11   -v -o CMakeFiles/cmTC_4a15b.dir/CMakeCXXCompilerABI.cpp.obj -c D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=D:\\Users\\admin\\Desktop\\work\\Toolchain\\arm-gnu-toolchain-14.3.rel1\\bin\\arm-none-eabi-g++.exe
         Target: arm-none-eabi
@@ -4507,9 +4590,9 @@ events:
         Thread model: single
         Supported LTO compression algorithms: zlib
         gcc version 14.3.1 20250623 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 
-        COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_8d765.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp' '-dumpdir' 'CMakeFiles/cmTC_8d765.dir/'
-         D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1plus.exe -quiet -v -imultilib thumb/v7e-m+dp/hard -iprefix D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../arm-none-eabi -D__USES_INITFINI__ D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_8d765.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mfpu=fpv5-d16 -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp.dp -march=armv7e-m+fp.dp -Wall -version -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -o C:\\Users\\admin\\AppData\\Local\\Temp\\ccc0Wtjf.s
-        GNU C++17 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) version 14.3.1 20250623 (arm-none-eabi)
+        COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-std=gnu++11' '-v' '-o' 'CMakeFiles/cmTC_4a15b.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp' '-dumpdir' 'CMakeFiles/cmTC_4a15b.dir/'
+         D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1plus.exe -quiet -v -imultilib thumb/v7e-m+dp/hard -iprefix D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../arm-none-eabi -D__USES_INITFINI__ D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_4a15b.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mfpu=fpv5-d16 -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp.dp -march=armv7e-m+fp.dp -Wall -std=gnu++11 -version -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -o C:\\Users\\admin\\AppData\\Local\\Temp\\ccpwjLiP.s
+        GNU C++11 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) version 14.3.1 20250623 (arm-none-eabi)
         	compiled by GNU C version 10-win32 20220113, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
         
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
@@ -4531,13 +4614,13 @@ events:
          D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include
         End of search list.
         Compiler executable checksum: dada17c8e112483894e5d212ab573e65
-        COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_8d765.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp' '-dumpdir' 'CMakeFiles/cmTC_8d765.dir/'
-         D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv7e-m+fp.dp -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv5-d16 -mfpu=fpv5-d16 -meabi=5 -o CMakeFiles/cmTC_8d765.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\admin\\AppData\\Local\\Temp\\ccc0Wtjf.s
+        COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-std=gnu++11' '-v' '-o' 'CMakeFiles/cmTC_4a15b.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp' '-dumpdir' 'CMakeFiles/cmTC_4a15b.dir/'
+         D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv7e-m+fp.dp -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv5-d16 -mfpu=fpv5-d16 -meabi=5 -o CMakeFiles/cmTC_4a15b.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\admin\\AppData\\Local\\Temp\\ccpwjLiP.s
         GNU assembler version 2.44.0 (arm-none-eabi) using BFD version (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 2.44.0.20250616
         COMPILER_PATH=D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../libexec/gcc/arm-none-eabi/14.3.1/;D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../libexec/gcc/;D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/
         LIBRARY_PATH=D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+dp/hard/;D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/;D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../arm-none-eabi/lib/thumb/v7e-m+dp/hard/;D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/;D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../lib/gcc/;D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/;D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_8d765.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp' '-dumpdir' 'CMakeFiles/cmTC_8d765.dir/CMakeCXXCompilerABI.cpp.'
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && D:\\Users\\admin\\Desktop\\work\\Toolchain\\cmake-4.1.2\\bin\\cmake.exe -E rm -f libcmTC_8d765.a && D:\\Users\\admin\\Desktop\\work\\Toolchain\\arm-gnu-toolchain-14.3.rel1\\bin\\arm-none-eabi-ar.exe qc libcmTC_8d765.a  CMakeFiles/cmTC_8d765.dir/CMakeCXXCompilerABI.cpp.obj && D:\\Users\\admin\\Desktop\\work\\Toolchain\\arm-gnu-toolchain-14.3.rel1\\bin\\arm-none-eabi-ranlib.exe libcmTC_8d765.a && cd ."
+        COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-std=gnu++11' '-v' '-o' 'CMakeFiles/cmTC_4a15b.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp' '-dumpdir' 'CMakeFiles/cmTC_4a15b.dir/CMakeCXXCompilerABI.cpp.'
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && D:\\Users\\admin\\Desktop\\work\\Toolchain\\cmake-4.1.2\\bin\\cmake.exe -E rm -f libcmTC_4a15b.a && D:\\Users\\admin\\Desktop\\work\\Toolchain\\arm-gnu-toolchain-14.3.rel1\\bin\\arm-none-eabi-ar.exe qc libcmTC_4a15b.a  CMakeFiles/cmTC_4a15b.dir/CMakeCXXCompilerABI.cpp.obj && D:\\Users\\admin\\Desktop\\work\\Toolchain\\arm-gnu-toolchain-14.3.rel1\\bin\\arm-none-eabi-ranlib.exe libcmTC_4a15b.a && cd ."
         Active code page: 65001
         
       exitCode: 0
@@ -4546,7 +4629,7 @@ events:
     backtrace:
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:28 (project)"
+      - "CMakeLists.txt:31 (project)"
     message: |
       Parsed CXX implicit include dir info: rv=done
         found start of include info
@@ -4572,15 +4655,15 @@ events:
     backtrace:
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:28 (project)"
+      - "CMakeLists.txt:31 (project)"
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(arm-none-eabi-g\\+\\+\\.exe|;ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(arm-none-eabi-g\\+\\+\\.exe|;ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: 'D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/CMakeFiles/CMakeScratch/TryCompile-u0waoe']
+        ignore line: [Change Dir: 'D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/CMakeFiles/CMakeScratch/TryCompile-4qeamt']
         ignore line: []
-        ignore line: [Run Build Command(s): D:/Users/admin/Desktop/work/Toolchain/ninja/ninja.exe -v cmTC_8d765]
-        ignore line: [[1/2] D:\\Users\\admin\\Desktop\\work\\Toolchain\\arm-gnu-toolchain-14.3.rel1\\bin\\arm-none-eabi-g++.exe   -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics    -v -o CMakeFiles/cmTC_8d765.dir/CMakeCXXCompilerABI.cpp.obj -c D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): D:/Users/admin/Desktop/work/Toolchain/ninja/ninja.exe -v cmTC_4a15b]
+        ignore line: [[1/2] D:\\Users\\admin\\Desktop\\work\\Toolchain\\arm-gnu-toolchain-14.3.rel1\\bin\\arm-none-eabi-g++.exe   -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics  -std=gnu++11   -v -o CMakeFiles/cmTC_4a15b.dir/CMakeCXXCompilerABI.cpp.obj -c D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=D:\\Users\\admin\\Desktop\\work\\Toolchain\\arm-gnu-toolchain-14.3.rel1\\bin\\arm-none-eabi-g++.exe]
         ignore line: [Target: arm-none-eabi]
@@ -4588,9 +4671,9 @@ events:
         ignore line: [Thread model: single]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 14.3.1 20250623 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_8d765.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp' '-dumpdir' 'CMakeFiles/cmTC_8d765.dir/']
-        ignore line: [ D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1plus.exe -quiet -v -imultilib thumb/v7e-m+dp/hard -iprefix D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../arm-none-eabi -D__USES_INITFINI__ D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_8d765.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mfpu=fpv5-d16 -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp.dp -march=armv7e-m+fp.dp -Wall -version -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -o C:\\Users\\admin\\AppData\\Local\\Temp\\ccc0Wtjf.s]
-        ignore line: [GNU C++17 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) version 14.3.1 20250623 (arm-none-eabi)]
+        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-std=gnu++11' '-v' '-o' 'CMakeFiles/cmTC_4a15b.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp' '-dumpdir' 'CMakeFiles/cmTC_4a15b.dir/']
+        ignore line: [ D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1plus.exe -quiet -v -imultilib thumb/v7e-m+dp/hard -iprefix D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../arm-none-eabi -D__USES_INITFINI__ D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_4a15b.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mfpu=fpv5-d16 -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp.dp -march=armv7e-m+fp.dp -Wall -std=gnu++11 -version -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -o C:\\Users\\admin\\AppData\\Local\\Temp\\ccpwjLiP.s]
+        ignore line: [GNU C++11 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) version 14.3.1 20250623 (arm-none-eabi)]
         ignore line: [	compiled by GNU C version 10-win32 20220113  GMP version 6.2.1  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.15-1-g835ea3a-GMP]
         ignore line: []
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
@@ -4612,8 +4695,8 @@ events:
         ignore line: [ D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: dada17c8e112483894e5d212ab573e65]
-        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_8d765.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp' '-dumpdir' 'CMakeFiles/cmTC_8d765.dir/']
-        ignore line: [ D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv7e-m+fp.dp -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv5-d16 -mfpu=fpv5-d16 -meabi=5 -o CMakeFiles/cmTC_8d765.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\admin\\AppData\\Local\\Temp\\ccc0Wtjf.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-std=gnu++11' '-v' '-o' 'CMakeFiles/cmTC_4a15b.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp' '-dumpdir' 'CMakeFiles/cmTC_4a15b.dir/']
+        ignore line: [ D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv7e-m+fp.dp -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv5-d16 -mfpu=fpv5-d16 -meabi=5 -o CMakeFiles/cmTC_4a15b.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\admin\\AppData\\Local\\Temp\\ccpwjLiP.s]
         ignore line: [GNU assembler version 2.44.0 (arm-none-eabi) using BFD version (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 2.44.0.20250616]
         ignore line: [COMPILER_PATH=D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../libexec/gcc/arm-none-eabi/14.3.1/]
         ignore line: [D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../libexec/gcc/]
@@ -4625,8 +4708,8 @@ events:
         ignore line: [D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../lib/gcc/]
         ignore line: [D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/]
         ignore line: [D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_8d765.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp' '-dumpdir' 'CMakeFiles/cmTC_8d765.dir/CMakeCXXCompilerABI.cpp.']
-        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && D:\\Users\\admin\\Desktop\\work\\Toolchain\\cmake-4.1.2\\bin\\cmake.exe -E rm -f libcmTC_8d765.a && D:\\Users\\admin\\Desktop\\work\\Toolchain\\arm-gnu-toolchain-14.3.rel1\\bin\\arm-none-eabi-ar.exe qc libcmTC_8d765.a  CMakeFiles/cmTC_8d765.dir/CMakeCXXCompilerABI.cpp.obj && D:\\Users\\admin\\Desktop\\work\\Toolchain\\arm-gnu-toolchain-14.3.rel1\\bin\\arm-none-eabi-ranlib.exe libcmTC_8d765.a && cd ."]
+        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-std=gnu++11' '-v' '-o' 'CMakeFiles/cmTC_4a15b.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp' '-dumpdir' 'CMakeFiles/cmTC_4a15b.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && D:\\Users\\admin\\Desktop\\work\\Toolchain\\cmake-4.1.2\\bin\\cmake.exe -E rm -f libcmTC_4a15b.a && D:\\Users\\admin\\Desktop\\work\\Toolchain\\arm-gnu-toolchain-14.3.rel1\\bin\\arm-none-eabi-ar.exe qc libcmTC_4a15b.a  CMakeFiles/cmTC_4a15b.dir/CMakeCXXCompilerABI.cpp.obj && D:\\Users\\admin\\Desktop\\work\\Toolchain\\arm-gnu-toolchain-14.3.rel1\\bin\\arm-none-eabi-ranlib.exe libcmTC_4a15b.a && cd ."]
         ignore line: [Active code page: 65001]
         ignore line: []
         ignore line: []
@@ -4643,7 +4726,7 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/Internal/CMakeDetermineLinkerId.cmake:36 (message)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:28 (project)"
+      - "CMakeLists.txt:31 (project)"
     message: |
       Running the CXX compiler's linker: "[1/2] D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/arm-none-eabi-g++.exe" "-v"
       
@@ -4653,7 +4736,7 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/Internal/CMakeDetermineLinkerId.cmake:36 (message)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:28 (project)"
+      - "CMakeLists.txt:31 (project)"
     message: |
       Running the CXX compiler's linker: "[1/2] D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/arm-none-eabi-g++.exe" "-V"
       
@@ -4663,7 +4746,7 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/Internal/CMakeDetermineLinkerId.cmake:36 (message)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:28 (project)"
+      - "CMakeLists.txt:31 (project)"
     message: |
       Running the CXX compiler's linker: "[1/2] D:/Users/admin/Desktop/work/Toolchain/arm-gnu-toolchain-14.3.rel1/bin/arm-none-eabi-g++.exe" "--version"
       
@@ -4672,7 +4755,7 @@ events:
     backtrace:
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCompiler.cmake:115 (find_program)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineASMCompiler.cmake:64 (_cmake_find_compiler_path)"
-      - "CMakeLists.txt:32 (enable_language)"
+      - "CMakeLists.txt:35 (enable_language)"
     mode: "program"
     variable: "CMAKE_ASM_COMPILER_WITH_PATH"
     description: "Path to a program."
@@ -4696,7 +4779,7 @@ events:
       - "C:/Program Files/dotnet/"
       - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
       - "D:/texlive/2025/bin/windows/"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/"
       - "D:/Microsoft VS Code/bin/"
       - "C:/Program Files/Git/cmd/"
       - "D:/Program Files/Python313/"
@@ -4714,6 +4797,7 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/ctags/"
       - "D:/Users/admin/Desktop/work/Toolchain/Icarus/bin/"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/"
       - "D:/Arm_GNU/bin/"
       - "D:/MinGW/bin/"
       - "C:/Users/admin/AppData/Local/Microsoft/WindowsApps/"
@@ -4754,9 +4838,9 @@ events:
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc.com"
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc.exe"
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc.com"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc.exe"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc.com"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc.exe"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc.com"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc.exe"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc"
@@ -4813,6 +4897,7 @@ events:
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\ctags"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\Icarus\\bin"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\gtkwave_gtk3_mingw64_standalone\\bin"
+        - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\JLink"
         - "D:\\Arm_GNU\\bin"
         - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
@@ -4837,7 +4922,7 @@ events:
     backtrace:
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:1290 (message)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineASMCompiler.cmake:170 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
-      - "CMakeLists.txt:32 (enable_language)"
+      - "CMakeLists.txt:35 (enable_language)"
     message: |
       Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
       arm-none-eabi-gcc.exe (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 14.3.1 20250623
@@ -4850,7 +4935,7 @@ events:
     backtrace:
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineASMCompiler.cmake:268 (include)"
-      - "CMakeLists.txt:32 (enable_language)"
+      - "CMakeLists.txt:35 (enable_language)"
     mode: "program"
     variable: "CMAKE_ASM_COMPILER_AR"
     description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
@@ -4878,7 +4963,7 @@ events:
       - "C:/Program Files/dotnet/"
       - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
       - "D:/texlive/2025/bin/windows/"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/"
       - "D:/Microsoft VS Code/bin/"
       - "C:/Program Files/Git/cmd/"
       - "D:/Program Files/Python313/"
@@ -4895,6 +4980,7 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/ctags/"
       - "D:/Users/admin/Desktop/work/Toolchain/Icarus/bin/"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/"
       - "D:/Arm_GNU/bin/"
       - "D:/MinGW/bin/"
       - "C:/Users/admin/AppData/Local/Microsoft/WindowsApps/"
@@ -4938,9 +5024,9 @@ events:
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ar-.com"
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ar-.exe"
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ar-"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar-.com"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar-.exe"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar-"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar-.com"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar-.exe"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar-"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-.com"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-.exe"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-"
@@ -4989,6 +5075,9 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ar-.com"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ar-.exe"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ar-"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ar-.com"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ar-.exe"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ar-"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ar-.com"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ar-.exe"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ar-"
@@ -5055,9 +5144,9 @@ events:
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ar-.com"
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ar-.exe"
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ar-"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar-.com"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar-.exe"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar-"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar-.com"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar-.exe"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ar-"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-.com"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-.exe"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-"
@@ -5106,6 +5195,9 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ar-.com"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ar-.exe"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ar-"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ar-.com"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ar-.exe"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ar-"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ar-.com"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ar-.exe"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ar-"
@@ -5174,6 +5266,7 @@ events:
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\ctags"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\Icarus\\bin"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\gtkwave_gtk3_mingw64_standalone\\bin"
+        - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\JLink"
         - "D:\\Arm_GNU\\bin"
         - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
@@ -5198,7 +5291,7 @@ events:
     backtrace:
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
       - "D:/Users/admin/Desktop/work/Toolchain/cmake-4.1.2/share/cmake-4.1/Modules/CMakeDetermineASMCompiler.cmake:268 (include)"
-      - "CMakeLists.txt:32 (enable_language)"
+      - "CMakeLists.txt:35 (enable_language)"
     mode: "program"
     variable: "CMAKE_ASM_COMPILER_RANLIB"
     description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
@@ -5226,7 +5319,7 @@ events:
       - "C:/Program Files/dotnet/"
       - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
       - "D:/texlive/2025/bin/windows/"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/"
       - "D:/Microsoft VS Code/bin/"
       - "C:/Program Files/Git/cmd/"
       - "D:/Program Files/Python313/"
@@ -5243,6 +5336,7 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/ctags/"
       - "D:/Users/admin/Desktop/work/Toolchain/Icarus/bin/"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/"
       - "D:/Arm_GNU/bin/"
       - "D:/MinGW/bin/"
       - "C:/Users/admin/AppData/Local/Microsoft/WindowsApps/"
@@ -5286,9 +5380,9 @@ events:
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ranlib-.com"
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ranlib-.exe"
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ranlib-"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib-.com"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib-.exe"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib-"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib-.com"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib-.exe"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib-"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-.com"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-.exe"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-"
@@ -5337,6 +5431,9 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ranlib-.com"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ranlib-.exe"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ranlib-"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ranlib-.com"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ranlib-.exe"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ranlib-"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ranlib-.com"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ranlib-.exe"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ranlib-"
@@ -5403,9 +5500,9 @@ events:
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ranlib-.com"
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ranlib-.exe"
       - "D:/texlive/2025/bin/windows/arm-none-eabi-gcc-ranlib-"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib-.com"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib-.exe"
-      - "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib-"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib-.com"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib-.exe"
+      - "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/---/arm-none-eabi-gcc-ranlib-"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-.com"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-.exe"
       - "D:/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-"
@@ -5454,6 +5551,9 @@ events:
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ranlib-.com"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ranlib-.exe"
       - "D:/Users/admin/Desktop/work/Toolchain/gtkwave_gtk3_mingw64_standalone/bin/arm-none-eabi-gcc-ranlib-"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ranlib-.com"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ranlib-.exe"
+      - "D:/Users/admin/Desktop/work/Toolchain/JLink/arm-none-eabi-gcc-ranlib-"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ranlib-.com"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ranlib-.exe"
       - "D:/Arm_GNU/bin/arm-none-eabi-gcc-ranlib-"
@@ -5522,6 +5622,7 @@ events:
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\ctags"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\Icarus\\bin"
         - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\gtkwave_gtk3_mingw64_standalone\\bin"
+        - "D:\\Users\\admin\\Desktop\\work\\Toolchain\\JLink"
         - "D:\\Arm_GNU\\bin"
         - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"

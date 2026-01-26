@@ -1,4 +1,4 @@
-# Install script for directory: D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/cmake/stm32cubemx
+# Install script for directory: D:/Users/admin/Desktop/26/TY_H723_CMake_1/cmake/stm32cubemx
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,6 +40,6 @@ endif()
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/cmake/stm32cubemx/install_local_manifest.txt"
+  file(WRITE "D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/cmake/stm32cubemx/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

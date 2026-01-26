@@ -72,7 +72,7 @@ rule C_COMPILER__STM32_Drivers_unscanned_Debug
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = D:\Users\admin\Desktop\work\Toolchain\cmake-4.1.2\bin\cmake.exe --regenerate-during-build -S"D:\Users\admin\Desktop\work\STM32 Code\TY_H723_CMake_1" -B"D:\Users\admin\Desktop\work\STM32 Code\TY_H723_CMake_1\build\Debug"
+  command = D:\Users\admin\Desktop\work\Toolchain\cmake-4.1.2\bin\cmake.exe --regenerate-during-build -SD:\Users\admin\Desktop\26\TY_H723_CMake_1 -BD:\Users\admin\Desktop\26\TY_H723_CMake_1\build\Debug
   description = Re-running CMake...
   generator = 1
 
@@ -81,7 +81,7 @@ rule RERUN_CMAKE
 # Rule for re-checking globbed directories.
 
 rule VERIFY_GLOBS
-  command = D:\Users\admin\Desktop\work\Toolchain\cmake-4.1.2\bin\cmake.exe -P "D:\Users\admin\Desktop\work\STM32 Code\TY_H723_CMake_1\build\Debug\CMakeFiles\VerifyGlobs.cmake"
+  command = D:\Users\admin\Desktop\work\Toolchain\cmake-4.1.2\bin\cmake.exe -P D:\Users\admin\Desktop\26\TY_H723_CMake_1\build\Debug\CMakeFiles\VerifyGlobs.cmake
   description = Re-checking globbed directories...
   generator = 1
 

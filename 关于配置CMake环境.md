@@ -10,8 +10,6 @@
 2. **clang 和 LLVM** - 提供高级代码分析、语法高亮和智能补全功能（虽然不是必须，但推荐安装以获得更好的开发体验）
 3. **arm-gnu-toolchain** - ARM官方发布的GNU交叉编译工具链，包含arm-none-eabi-gcc等核心编译器，用于生成ARM Cortex-M架构的机器码
 4. **Ninja** - 高速构建系统，相比Make具有更快的构建速度和更清晰的输出
-5. **JLink** - JLink烧录
-6. **OpenOCD** - OpenOCD烧录
 
 需要下载的插件：(有一些是必要的，有一些是辅助开发体验的)
 
@@ -44,7 +42,6 @@ D:\Users\admin\Desktop\work\Toolchain\cmake-4.12.1\bin
 D:\Users\admin\Desktop\work\Toolchain\LLVM\bin
 D:\Users\admin\Desktop\work\Toolchain\ninja
 D:\Users\admin\Desktop\work\Toolchain\OpenOCD-20250710\bin
-D:\Users\admin\Desktop\work\Toolchain\JLink
 ```
 
 > 图：环境变量配置界面，展示了如何将工具链的bin目录添加到系统PATH中。
@@ -59,7 +56,7 @@ D:\Users\admin\Desktop\work\Toolchain\JLink
 
 默认情况下，项目会以Debug模式进行构建。您可以通过VSCode状态栏中的CMake选项快速切换构建类型。
 
-下文的配置界面，均使用Debug模式演示。（有的CMake中没有这些模式，根据不同的CMakeList来对照着看，STM32有的）
+下文的配置界面，均使用Debug模式演示。
 
 ~~因为cmake不会自动找到arm-gnu编译器，因此我们需要在CMakeList.txt里添加工具链：~~
 
@@ -113,12 +110,6 @@ STM32CubeMX生成的项目通常已默认开启此设置，无需手动添加。
 ---
 
 # 程序烧录与调试配置指南
-
-> README: 已经尽可能的修改成了不需要配置点击就用的方式。烧录/调试都不需要改对应的.elf文件的设置。
->
-> 这样实现的方法是，工程的主文件夹名，工程的ioc文件的名字，工程的.elf文件的名字都一样，就可以不需要修改就能烧录和调试
->
-> 但是对应的arm_gcc等等的工具链的位置，还是要改成一样的，但是这个只需要第一次改成一样的，之后这些文件直接复制+覆盖就可以了
 
 ## 一、调试工具链组成
 
@@ -179,8 +170,6 @@ openocd -f user_daplink.cfg -c "program build/Debug/Project_bsp.elf verify reset
 
 可以照着抄，但是需要根据自己的芯片和对应文件的路径修改。
 
-也有JLink的模板，但是JLink我只在TI上使用，故不知道
-
 ```json
 {
   "version": "0.2.0",
@@ -189,19 +178,19 @@ openocd -f user_daplink.cfg -c "program build/Debug/Project_bsp.elf verify reset
       "cwd": "${workspaceRoot}",
       "type": "cortex-debug",
       "request": "launch",
-      "name": "OpenOCD", // 可改名字
+      "name": "OpenOCD", # 可改名字
       "servertype": "openocd",
       "executable": "build/Debug/Project_bsp.elf",
-      // 根据自己的项目位置和名字去修改，如何修改同上
+      # 根据自己的项目位置和名字去修改，如何修改同上
       "runToEntryPoint": "main",
       "configFiles": [
         "interface/cmsis-dap.cfg",
-        // 根据自己用的烧录器，具体的文件夹去openocd里面去找
+        # 根据自己用的烧录器，具体的文件夹去openocd里面去找
         "target/stm32h7x.cfg"
-        // 根据自己用的芯片对应的文件，具体的文件夹去openocd里面去找
+        # 根据自己用的芯片对应的文件，具体的文件夹去openocd里面去找
       ],
       "liveWatch": {
-        // livewatch是开启实时查看变量功能，类似keil的watch
+        # livewatch是开启实时查看变量功能，类似keil的watch
         "enabled": true,
         "samplesPerSecond": 20
       }
@@ -225,4 +214,3 @@ openocd -f user_daplink.cfg -c "program build/Debug/Project_bsp.elf verify reset
 右键，通过code打开文件夹。然后第一次进需要配置CMake信息，选择Debug模式，然后让他配置工程，查看是否报错。如果没问题就可以愉快的和用keil一样的开发方式，使用CMake进行开发。编译使用CMake，烧录使用openocd指令，调试使用cortex-debug实现的使用vscode官方的运行与调试。
 
 推荐使用vscode的配置文件功能，去管理对应不同的开发环境的存放位置。运用这种方法就可以实现分开管理这些东西。减少占用，管理更加方便。如果有需要的可以去自行搜索如何使用。以及vscode的常见配置均可以自行去网上搜索
-

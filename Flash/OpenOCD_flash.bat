@@ -13,4 +13,4 @@ if not exist "%ELF_FILE%" (
 )
 
 REM 使用标准化路径烧录
-openocd -f openocd/daplink.cfg -c "program \"%ELF_FILE%\" verify reset exit"
+openocd -f Flash/daplink.cfg -c "program \"%ELF_FILE%\" verify reset exit"

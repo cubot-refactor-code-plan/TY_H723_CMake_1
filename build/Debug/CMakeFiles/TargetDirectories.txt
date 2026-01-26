@@ -1,6 +1,6 @@
-D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/CMakeFiles/TY_H723_CMake_1.dir
-D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/CMakeFiles/edit_cache.dir
-D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/CMakeFiles/rebuild_cache.dir
-D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir
-D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/cmake/stm32cubemx/CMakeFiles/edit_cache.dir
-D:/Users/admin/Desktop/work/STM32 Code/TY_H723_CMake_1/build/Debug/cmake/stm32cubemx/CMakeFiles/rebuild_cache.dir
+D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/CMakeFiles/TY_H723_CMake_1.dir
+D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/CMakeFiles/edit_cache.dir
+D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/CMakeFiles/rebuild_cache.dir
+D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir
+D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/cmake/stm32cubemx/CMakeFiles/edit_cache.dir
+D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/cmake/stm32cubemx/CMakeFiles/rebuild_cache.dir
