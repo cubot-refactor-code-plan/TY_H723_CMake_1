@@ -22,9 +22,10 @@ root
 │  ├─Inc          |略
 │  └─Src          |略
 ├─Drivers         |---
-├─OpenOCD         |个人写的烧录相关 修改flash的.elf内容（openocd） 有条件可以加除了dap之外的烧录器
+├─Flash           |个人写的烧录相关 修改flash的.elf内容（openocd） 有条件可以加除了dap之外的烧录器
+├─Middlewares     |官方生成库，DSP 和 FreeRTOS
 └─User            |---
-    ├─Alg         |算法 / DSP
+    ├─Alg         |算法
     ├─Bsp         |板载支持包
     ├─Drv         |驱动层 /设备层
     ├─Mid         |中间层
