@@ -29,7 +29,7 @@
 
 #include "bsp_usart.hpp"
 #include <stdarg.h>
-#include "math.h"
+#include "arm_math.h"
 
 /**
  * @brief ARM_GCC UART1 串口重定向、但阻塞 (printf)

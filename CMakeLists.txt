@@ -15,6 +15,7 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS ON)
 
+include("cmake/gcc-arm-none-eabi.cmake")
 
 # Define the build type
 if(NOT CMAKE_BUILD_TYPE)
@@ -75,6 +76,7 @@ target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     ./User/Drv
     ./User/Mid
     ./User/Alg
+    ./Middlewares/ARM/DSP/Include
 )
 
 # Add project symbols (macros)
