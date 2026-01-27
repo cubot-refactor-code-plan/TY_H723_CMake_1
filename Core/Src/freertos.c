@@ -26,6 +26,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <stdio.h>
+#include "api_main.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -47,12 +48,24 @@
 /* USER CODE BEGIN Variables */
 
 /* USER CODE END Variables */
-/* Definitions for defaultTask */
-osThreadId_t defaultTaskHandle;
-const osThreadAttr_t defaultTask_attributes = {
-  .name = "defaultTask",
+/* Definitions for receiveTask */
+osThreadId_t receiveTaskHandle;
+const osThreadAttr_t receiveTask_attributes = {
+  .name = "receiveTask",
   .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityNormal,
+};
+/* Definitions for transmitTask */
+osThreadId_t transmitTaskHandle;
+const osThreadAttr_t transmitTask_attributes = {
+  .name = "transmitTask",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityNormal,
+};
+/* Definitions for messageQueue */
+osMessageQueueId_t messageQueueHandle;
+const osMessageQueueAttr_t messageQueue_attributes = {
+  .name = "messageQueue"
 };
 
 /* Private function prototypes -----------------------------------------------*/
@@ -60,7 +73,8 @@ const osThreadAttr_t defaultTask_attributes = {
 
 /* USER CODE END FunctionPrototypes */
 
-void StartDefaultTask(void *argument);
+void _receiveTask(void *argument);
+void _transmitTask(void *argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -86,13 +100,20 @@ void MX_FREERTOS_Init(void) {
   /* start timers, add new ones, ... */
   /* USER CODE END RTOS_TIMERS */
 
+  /* Create the queue(s) */
+  /* creation of messageQueue */
+  messageQueueHandle = osMessageQueueNew (8, sizeof(uint32_t), &messageQueue_attributes);
+
   /* USER CODE BEGIN RTOS_QUEUES */
   /* add queues, ... */
   /* USER CODE END RTOS_QUEUES */
 
   /* Create the thread(s) */
-  /* creation of defaultTask */
-  defaultTaskHandle = osThreadNew(StartDefaultTask, NULL, &defaultTask_attributes);
+  /* creation of receiveTask */
+  receiveTaskHandle = osThreadNew(_receiveTask, NULL, &receiveTask_attributes);
+
+  /* creation of transmitTask */
+  transmitTaskHandle = osThreadNew(_transmitTask, NULL, &transmitTask_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -104,25 +125,49 @@ void MX_FREERTOS_Init(void) {
 
 }
 
-/* USER CODE BEGIN Header_StartDefaultTask */
+/* USER CODE BEGIN Header__receiveTask */
 /**
-  * @brief  Function implementing the defaultTask thread.
+  * @brief  Function implementing the receiveTask thread.
   * @param  argument: Not used
   * @retval None
   */
-/* USER CODE END Header_StartDefaultTask */
-void StartDefaultTask(void *argument)
+/* USER CODE END Header__receiveTask */
+void _receiveTask(void *argument)
 {
-  /* USER CODE BEGIN StartDefaultTask */
-  int count = 0;
+  /* USER CODE BEGIN _receiveTask */
+
+  /* USER CODE END _receiveTask */
+}
+
+/* USER CODE BEGIN Header__transmitTask */
+/**
+* @brief Function implementing the transmitTask thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header__transmitTask */
+void _transmitTask(void *argument)
+{
+  /* USER CODE BEGIN _transmitTask */
+  uint32_t send_data1 = 1;
+  uint32_t send_data2 = 2;
+  osStatus_t xReturn = osOK;
+
   /* Infinite loop */
-  for(;;)
+  for (;;)
   {
-    count++;
-    printf("%d\n",count);
-    osDelay(500);
+    xReturn = osMessageQueuePut(messageQueueHandle,&send_data1,0,1);
+    if(xReturn)
+    {
+      printf("1\n");
+    }
+    xReturn = osMessageQueuePut(messageQueueHandle,&send_data2,0,1);
+    if(xReturn)
+    {
+      printf("2\n");
+    }
   }
-  /* USER CODE END StartDefaultTask */
+  /* USER CODE END _transmitTask */
 }
 
 /* Private application code --------------------------------------------------*/

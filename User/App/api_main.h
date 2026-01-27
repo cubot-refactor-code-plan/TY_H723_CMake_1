@@ -7,6 +7,7 @@ extern "C"
 #endif
 
   void app_init(void);
+  void receive();
 
 #ifdef __cplusplus
 }

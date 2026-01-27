@@ -5,7 +5,8 @@ enable_language(C ASM)
 set(MX_Defines_Syms 
 	USE_PWR_LDO_SUPPLY 
 	USE_HAL_DRIVER 
-	STM32H723xx
+	STM32H723xx 
+	STM32_THREAD_SAFE_STRATEGY=5
     $<$<CONFIG:Debug>:DEBUG>
 )
 
