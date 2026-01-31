@@ -50,4 +50,3 @@ extern "C"
     return len;
   }
 }
-
