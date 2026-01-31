@@ -31,7 +31,7 @@
 #include <stdio.h>
 
 /**
- * @brief ARM_GCC UART1 串口重定向、但阻塞 (printf)
+ * @brief ARM_GCC UART1 串口重定向、但阻塞 (printf)、使用了cubemx自带的设置，为重定向自动加锁
  * 
  * @note extern "C" 的原因是，这些函数是覆盖在原来weak弱定义上的，不能被cpp进行名称修饰
  *

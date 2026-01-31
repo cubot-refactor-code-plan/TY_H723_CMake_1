@@ -48,12 +48,12 @@
 /* USER CODE BEGIN Variables */
 
 /* USER CODE END Variables */
-/* Definitions for receiveTask */
-osThreadId_t receiveTaskHandle;
-const osThreadAttr_t receiveTask_attributes = {
-  .name = "receiveTask",
+/* Definitions for defaultTask */
+osThreadId_t defaultTaskHandle;
+const osThreadAttr_t defaultTask_attributes = {
+  .name = "defaultTask",
   .stack_size = 128 * 4,
-  .priority = (osPriority_t) osPriorityNormal,
+  .priority = (osPriority_t) osPriorityBelowNormal,
 };
 /* Definitions for transmitTask */
 osThreadId_t transmitTaskHandle;
@@ -62,10 +62,17 @@ const osThreadAttr_t transmitTask_attributes = {
   .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityNormal,
 };
-/* Definitions for messageQueue */
-osMessageQueueId_t messageQueueHandle;
-const osMessageQueueAttr_t messageQueue_attributes = {
-  .name = "messageQueue"
+/* Definitions for receiveTask */
+osThreadId_t receiveTaskHandle;
+const osThreadAttr_t receiveTask_attributes = {
+  .name = "receiveTask",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityLow,
+};
+/* Definitions for sendSem */
+osSemaphoreId_t sendSemHandle;
+const osSemaphoreAttr_t sendSem_attributes = {
+  .name = "sendSem"
 };
 
 /* Private function prototypes -----------------------------------------------*/
@@ -73,8 +80,9 @@ const osMessageQueueAttr_t messageQueue_attributes = {
 
 /* USER CODE END FunctionPrototypes */
 
-void _receiveTask(void *argument);
-void _transmitTask(void *argument);
+extern void _defaultTask(void *argument);
+extern void _transmitTask(void *argument);
+extern void _receiveTask(void *argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -92,6 +100,10 @@ void MX_FREERTOS_Init(void) {
   /* add mutexes, ... */
   /* USER CODE END RTOS_MUTEX */
 
+  /* Create the semaphores(s) */
+  /* creation of sendSem */
+  sendSemHandle = osSemaphoreNew(1, 0, &sendSem_attributes);
+
   /* USER CODE BEGIN RTOS_SEMAPHORES */
   /* add semaphores, ... */
   /* USER CODE END RTOS_SEMAPHORES */
@@ -100,75 +112,35 @@ void MX_FREERTOS_Init(void) {
   /* start timers, add new ones, ... */
   /* USER CODE END RTOS_TIMERS */
 
-  /* Create the queue(s) */
-  /* creation of messageQueue */
-  messageQueueHandle = osMessageQueueNew (8, sizeof(uint32_t), &messageQueue_attributes);
-
   /* USER CODE BEGIN RTOS_QUEUES */
   /* add queues, ... */
   /* USER CODE END RTOS_QUEUES */
 
   /* Create the thread(s) */
-  /* creation of receiveTask */
-  receiveTaskHandle = osThreadNew(_receiveTask, NULL, &receiveTask_attributes);
+  /* creation of defaultTask */
+  defaultTaskHandle = osThreadNew(_defaultTask, NULL, &defaultTask_attributes);
 
   /* creation of transmitTask */
   transmitTaskHandle = osThreadNew(_transmitTask, NULL, &transmitTask_attributes);
 
+  /* creation of receiveTask */
+  receiveTaskHandle = osThreadNew(_receiveTask, NULL, &receiveTask_attributes);
+
   /* USER CODE BEGIN RTOS_THREADS */
+
   /* add threads, ... */
+
   /* USER CODE END RTOS_THREADS */
 
   /* USER CODE BEGIN RTOS_EVENTS */
+
   /* add events, ... */
+  
   /* USER CODE END RTOS_EVENTS */
 
 }
 
-/* USER CODE BEGIN Header__receiveTask */
-/**
-  * @brief  Function implementing the receiveTask thread.
-  * @param  argument: Not used
-  * @retval None
-  */
-/* USER CODE END Header__receiveTask */
-void _receiveTask(void *argument)
-{
-  /* USER CODE BEGIN _receiveTask */
-
-  /* USER CODE END _receiveTask */
-}
-
-/* USER CODE BEGIN Header__transmitTask */
-/**
-* @brief Function implementing the transmitTask thread.
-* @param argument: Not used
-* @retval None
-*/
-/* USER CODE END Header__transmitTask */
-void _transmitTask(void *argument)
-{
-  /* USER CODE BEGIN _transmitTask */
-  uint32_t send_data1 = 1;
-  uint32_t send_data2 = 2;
-  osStatus_t xReturn = osOK;
-
-  /* Infinite loop */
-  for (;;)
-  {
-    xReturn = osMessageQueuePut(messageQueueHandle,&send_data1,0,1);
-    if(xReturn)
-    {
-      printf("1\n");
-    }
-    xReturn = osMessageQueuePut(messageQueueHandle,&send_data2,0,1);
-    if(xReturn)
-    {
-      printf("2\n");
-    }
-  }
-  /* USER CODE END _transmitTask */
-}
+/* USER CODE BEGIN Header__defaultTask */
 
 /* Private application code --------------------------------------------------*/
 /* USER CODE BEGIN Application */
