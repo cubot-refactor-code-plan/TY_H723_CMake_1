@@ -155,7 +155,7 @@ BreakConstructorInitializers: BeforeColon
 # BreakStringLiterals: false
 
 # # 每行字符长度的限制，0表示没有限制
-ColumnLimit:     100
+ColumnLimit:     0
 
 # # 用于匹配注释信息的正则表达式，被匹配的行不会做任何修改
 # CommentPragmas:  '^ IWYU pragma:'
@@ -167,7 +167,7 @@ CompactNamespaces: false
 # # 构造函数的初始化列表要么都在同一行，要么都各自一行
 # -- true - 如果可能，初始化列表放在同一行；如果不满足长度选择，则每个单独放一行
 # -- false - 初始化列表可以随意放置
-# ConstructorInitializerAllOnOneLineOrOnePerLine: false
+ConstructorInitializerAllOnOneLineOrOnePerLine: true
 
 # # 构造函数的初始化列表和基类集成列表的对齐宽度
 ConstructorInitializerIndentWidth: 2
@@ -181,7 +181,7 @@ Cpp11BracedListStyle: true
 # 是否自动分析指针的对齐方式
 # -- true - 自动分析并使用指针的对齐方式，若无法分析，则使用 PointerAlignment
 # -- false - 不自动分析
-# DerivePointerAlignment: true
+DerivePointerAlignment: true
  
 # 是否禁用格式化
 DisableFormat:   false
@@ -284,7 +284,7 @@ PointerAlignment: Right
 #     BasedOnStyle:    google
 
 # # 重新排版注释
-ReflowComments:  false
+ReflowComments:  true
 
 # # 重新排序#include
 # -- Never - 不进行排序
@@ -310,7 +310,7 @@ SpaceAfterTemplateKeyword: true
 SpaceBeforeAssignmentOperators: true
 
 # # 在 C++11 的初始化列表前加空格
-# SpaceBeforeCpp11BracedList: true
+SpaceBeforeCpp11BracedList: true
 
 # 在构造函数的初始化冒号":"前加空格
 # SpaceBeforeCtorInitializerColon: true

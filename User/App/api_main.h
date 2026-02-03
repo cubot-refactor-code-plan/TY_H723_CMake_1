@@ -9,8 +9,6 @@ extern "C"
   void app_init(void);
 
   void _defaultTask(void *argument);
-  void _transmitTask(void *argument);
-  void _receiveTask(void *argument);
 
 #ifdef __cplusplus
 }
