@@ -71,10 +71,10 @@ void _defaultTask(void *argument)
   uint8_t buffer[256] = {0};
   for (;;)
   {
-    int count = bsp_usart6.receiveData(buffer,256,osWaitForever);
+    int count = bsp_usart6.receiveData(buffer,8,osWaitForever);
     if(count > 0)
     {
-      bsp_usart6.sendData(buffer,256);
+      bsp_usart6.sendData(buffer,8);
     }
   }
 }
