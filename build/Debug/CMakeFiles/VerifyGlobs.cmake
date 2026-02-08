@@ -51,7 +51,6 @@ endif()
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false RELATIVE "D:/Users/admin/Desktop/26/TY_H723_CMake_1" "D:/Users/admin/Desktop/26/TY_H723_CMake_1/User/Bsp/*.cpp")
 set(OLD_GLOB
   "User/Bsp/bsp_usart.cpp"
-  "User/Bsp/uart.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

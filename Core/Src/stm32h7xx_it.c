@@ -22,7 +22,7 @@
 #include "stm32h7xx_it.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "uart.hpp"
+#include "bsp_usart.hpp"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/

@@ -21,8 +21,7 @@
 #include "task.h"
 #include "cmsis_os2.h"
 
-#include "uart.hpp"
-#include "usart.h"
+#include "bsp_usart.hpp"
 
 /**
  * @brief main中初始化（无freertos）
@@ -41,7 +40,7 @@ void app_init()
  */
 void freertos_init()
 {
-  g_serial_driver_uart6.init();
+  bsp_usart6.init();
   printf("freertos_init\n");
 }
 
@@ -72,10 +71,10 @@ void _defaultTask(void *argument)
   uint8_t buffer[256] = {0};
   for (;;)
   {
-    int count = g_serial_driver_uart6.receiveData(buffer,256,osWaitForever);
+    int count = bsp_usart6.receiveData(buffer,256,osWaitForever);
     if(count > 0)
     {
-      g_serial_driver_uart6.sendData(buffer,256);
+      bsp_usart6.sendData(buffer,256);
     }
   }
 }
