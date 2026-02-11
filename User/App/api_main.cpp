@@ -18,7 +18,7 @@
 #include "cmsis_os2.h"
 
 #include "bsp_usart.hpp"
-#include "bsp_can.hpp"
+#include "JC2804.hpp"
 
 /**
  * @brief main中初始化（无freertos）
@@ -43,7 +43,6 @@ void freertos_init()
   printf("freertos_init\n");
 }
 
-
 /**
  * 因为CMSIS_OS2这个封装，导致很多东西和原生的FreeRTOS不一样，所以写法也会有的不一样
  * CMSIS_OS2很多句柄不对外声明，如果想用只能extern出来用
@@ -59,7 +58,6 @@ void freertos_init()
  *       所以，我直接把任务放到一个转接文件，然后extern
  */
 
-
 /* 声明需要使用的句柄 */
 
 /* CMSIS_OS2中使用的是声明，我只需要外部定义同名的函数，然后exteren "C"即可 */
@@ -71,8 +69,16 @@ void freertos_init()
  */
 void _defaultTask(void *argument)
 {
+  motor_yaw.enter_closed_loop();
+  osDelay(10);
+  motor_yaw.set_control_mode(1);
+
   for (;;)
   {
+    motor_yaw.set_speed(60);
     osDelay(1000);
+    motor_yaw.set_speed(-60);
+    osDelay(1000);
+
   }
 }
