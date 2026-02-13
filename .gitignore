@@ -3,11 +3,6 @@
 # ==============================================================================
 # 忽略 CMake 和 Make 的构建目录
 build/
-Build/
-Debug/
-Release/
-cmake-build-debug/
-cmake-build-release/
 
 # 具体的编译中间文件 (Object files, dependency files)
 *.o

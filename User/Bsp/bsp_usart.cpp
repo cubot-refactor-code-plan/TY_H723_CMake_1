@@ -18,10 +18,10 @@
  * @note 模板实例化实现 以及类的实例化 第一个数字为缓冲区大小（uint8_t） 第二个数字为消息队列的长度（uint8_t）
  *
  *   // 全局实例化模板
- *   template class bsp_usart<256, 8>;
+ *   template class bsp_usart<256, 8>;  
  *
  *   // 全局实例化类
- *   __attribute__((section(".dma_buffer"))) 
+ *   __attribute__((section(".dma_buffer")))
  *   bsp_usart<256, 8> bsp_usart6(&huart6, bsp_usart<256, 8>::ReceiveMode::LATEST_ONLY, true);
  *
  *    bsp_usart6.init();                              // 需要freertos内核初始化成功之后使用
@@ -98,7 +98,7 @@ template class bsp_usart<256, 8>;
 // 这个 __attribute__((section(".dma_buffer"))) 是把他放到dtcm区域外，在.ld格式文件下实现的
 
 // __attribute__((section(".dma_buffer"))) bsp_usart<256, 8> bsp_usart6(&huart6, bsp_usart<256, 8>::ReceiveMode::LATEST_ONLY, true);
-__attribute__((section(".dma_buffer"))) bsp_usart<256, 8> bsp_usart6(&huart6, bsp_usart<256, 8>::ReceiveMode::SINGLE_BUFFER, true);
+__attribute__((section(".dma_buffer"))) bsp_usart<256, 8> bsp_usart6(&huart6, bsp_usart<256, 8>::ReceiveMode::SINGLE_BUFFER, true, 6); // 添加实例ID为6
 // __attribute__((section(".dma_buffer"))) bsp_usart<256, 8> bsp_usart6(&huart6, bsp_usart<256, 8>::ReceiveMode::DOUBLE_BUFFER, true);
 
 
@@ -124,10 +124,11 @@ __attribute__((section(".dma_buffer"))) bsp_usart<256, 8> bsp_usart6(&huart6, bs
  * @param huart 串口句柄
  * @param rx_mode 接收模式
  * @param transmit_signal 是否启用发送
+ * @param instance_id 实例ID，用于生成唯一资源名称
  */
 template <size_t BUFFER_SIZE, size_t MSG_SIZE>
-bsp_usart<BUFFER_SIZE, MSG_SIZE>::bsp_usart(UART_HandleTypeDef *huart, ReceiveMode rx_mode, bool transmit_signal)
-  : _huart(huart), _receive_mode(rx_mode), _rx_active(false), _current_buffer(false), _buffer_size(BUFFER_SIZE), _msg_item_size(MSG_SIZE), _transmit_enable(transmit_signal), _last_received_length(0)
+bsp_usart<BUFFER_SIZE, MSG_SIZE>::bsp_usart(UART_HandleTypeDef *huart, ReceiveMode rx_mode, bool transmit_signal, int instance_id)
+  : _huart(huart), _receive_mode(rx_mode), _rx_active(false), _current_buffer(false), _buffer_size(BUFFER_SIZE), _msg_item_size(MSG_SIZE), _transmit_enable(transmit_signal), _last_received_length(0), _instance_id(instance_id)
 {
   // 初始化成员变量但不执行资源分配
   _mutex_id             = nullptr;
@@ -140,10 +141,12 @@ bsp_usart<BUFFER_SIZE, MSG_SIZE>::bsp_usart(UART_HandleTypeDef *huart, ReceiveMo
 template <size_t BUFFER_SIZE, size_t MSG_SIZE>
 bool bsp_usart<BUFFER_SIZE, MSG_SIZE>::init()
 {
-  // 创建互斥锁
+  // 创建互斥锁，使用实例ID作为唯一标识
+  snprintf(mutex_name, sizeof(mutex_name), "USART%d_Mutex", _instance_id);
+
   const osMutexAttr_t mutex_attr =
     {
-      .name      = "SerialMutex",
+      .name      = mutex_name,
       .attr_bits = 0,
       .cb_mem    = nullptr,
       .cb_size   = 0};
@@ -157,9 +160,11 @@ bool bsp_usart<BUFFER_SIZE, MSG_SIZE>::init()
   // 根据接收模式创建消息队列 - 只有LATEST_ONLY模式才创建
   if (_receive_mode == ReceiveMode::LATEST_ONLY)
   {
+    snprintf(msgq_name, sizeof(msgq_name), "USART%d_MsgQ", _instance_id);
+
     const osMessageQueueAttr_t msgq_attr =
       {
-        .name      = "SerialMsgQ",
+        .name      = msgq_name,
         .attr_bits = 0,
         .cb_mem    = nullptr,
         .cb_size   = 0,

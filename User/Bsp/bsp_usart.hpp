@@ -56,6 +56,10 @@ private:
   size_t               _msg_item_size;              ///< 消息队列中每个项目的大小
   bool                 _transmit_enable;            ///< 是否启用发送
   uint32_t             _last_received_length;       ///< 最后一次接收的数据长度
+  int                  _instance_id;                ///< 实例ID，用于生成唯一资源名称
+  char                 mutex_name[32];              ///< 实例互斥锁的名字，用于调试时看到名字
+  char                 msgq_name[32];               ///< 实例消息队列的名字，用于调试时看到名字
+
 
 public:
   /**
@@ -66,8 +70,9 @@ public:
    * @param huart UART句柄指针
    * @param rx_mode 接收模式
    * @param transmit_signal 是否启用发送功能
+   * @param instance_id 实例ID，用于生成唯一资源名称
    */
-  bsp_usart(UART_HandleTypeDef *huart, ReceiveMode rx_mode, bool transmit_signal);
+  bsp_usart(UART_HandleTypeDef *huart, ReceiveMode rx_mode, bool transmit_signal, int instance_id = 0);
 
   /**
    * @brief 初始化函数 初始化串口驱动对象，配置必要的FreeRTOS对象

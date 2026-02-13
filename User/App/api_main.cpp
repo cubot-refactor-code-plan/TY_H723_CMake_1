@@ -34,7 +34,7 @@ void app_init()
 
 
 /* 创建对应句柄 handle */
-osThreadId_t can_rx_handler_task_handle;
+osThreadId_t can_rx_task_handle; // CAN 接收后处理任务
 
 
 /**
@@ -54,13 +54,13 @@ void freertos_init()
   motor_pitch.init();
 
 
-  // 创建 CAN 接收后处理任务
+  // 创建 CAN 接收后处理任务 局部变量 传入就好
   const osThreadAttr_t can_rx_handler_task_attributes = {
-    .name       = "can_rx_handler_task",
+    .name       = "can_rx_task",
     .stack_size = 128 * 4,
     .priority   = (osPriority_t)osPriorityNormal,
   };
-  can_rx_handler_task_handle = osThreadNew(_can_rx_handler_task, nullptr, &can_rx_handler_task_attributes);
+  can_rx_task_handle = osThreadNew(_can_rx_handler_task, nullptr, &can_rx_handler_task_attributes);
 
 
   printf("freertos_init_ok\n");
@@ -68,12 +68,12 @@ void freertos_init()
 
 
 /**
- * 因为CMSIS_OS2这个封装，导致很多东西和原生的FreeRTOS不一样，所以写法也会有的不一样
- * CMSIS_OS2很多句柄不对外声明，如果想用只能extern出来用
- * 虽然说CMSIS_OS2做了层封装，方便使用。但是原生的FreeRTOS在以后要用的时候，还是要花时间适应
- * 默认任务只能weak声明，其他的可以使用外部声明
- * CubeMX提供了FreeRTOS配置的部分，故而使用CubeMX配置了，只有一些内容，必须使用cpp来写
- * 以下均为FreeRTOS的内容定义，因为使用c调用cpp，所以只能在这边定义，然后外部声明让官方接口调用
+ * 以下均为FreeRTOS的内容定义，使用c调用cpp，需要extern "C"定义，让RTOS接管
+ * CubeMX提供了FreeRTOS配置，故而使用它的CMSIS_OS2
+ * CMSIS_OS2封装了一层，导致很多东西和原生的FreeRTOS不一样，所以写法也会有的不一样
+ * CMSIS_OS2的初始句柄不对外声明，如果想用只能extern出来用
+ * CMSIS_OS2做了层封装，方便使用。但是原生的FreeRTOS在以后要用的时候，还是要花时间适应
+ * CMSIS_OS2的默认任务只能weak声明，其他的可以使用外部声明
  * printf要加\n
  *
  * @note 在C++中使用FreeRTOS的Task函数时
@@ -95,15 +95,18 @@ void freertos_init()
 extern "C" void _defaultTask(void *argument)
 {
   motor_yaw.enter_closed_loop();
-  osDelay(10);
+  osDelay(100);
   motor_yaw.set_control_mode(1);
+  osDelay(100);
+  // motor_yaw.set_speed(0);
+  // osDelay(100);
 
   for (;;)
   {
-    motor_yaw.set_speed(60);
-    osDelay(1000);
-    motor_yaw.set_speed(-60);
-    osDelay(1000);
+    motor_yaw.set_speed(30);
+    osDelay(3);
+    motor_yaw.set_speed(-30);
+    osDelay(3);
   }
 }
 
@@ -135,14 +138,6 @@ extern "C" void _can_rx_handler_task(void *argument)
       {
         motor_pitch.on_can_message(&rx_msg);
       }
-
-      // 打印调试信息
-      printf("CAN RX: ID=0x%03X, Data=", rx_msg.header.Identifier);
-      for (int i = 0; i < 8; ++i)
-      {
-        printf("%02X ", rx_msg.data[i]);
-      }
-      printf("\n");
     }
   }
 }

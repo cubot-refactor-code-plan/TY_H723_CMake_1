@@ -28,11 +28,12 @@
  */
 
 #include "bsp_can.hpp"
-
+#include <stdio.h>
+#include <string.h>
 
 /* 全局实例化类对象 */
 
-bsp_can bsp_can1(&hfdcan1);
+bsp_can bsp_can1(&hfdcan1, 1); 
 
 
 /* 中断回调函数 */
@@ -77,18 +78,63 @@ extern "C" void HAL_FDCAN_TxBufferCompleteCallback(FDCAN_HandleTypeDef* hfdcan, 
  *
  * @param hfdcan 传入到构造函数的句柄
  */
-bsp_can::bsp_can(FDCAN_HandleTypeDef* hfdcan) : _hfdcan(hfdcan)
+bsp_can::bsp_can(FDCAN_HandleTypeDef* hfdcan, int instanceId) : _hfdcan(hfdcan), _instanceId(instanceId)
 {
   rxQueueHandle = NULL;
   txMutexHandle = NULL;
 }
 
+// 析构函数
+bsp_can::~bsp_can()
+{
+  // 删除消息队列
+  if (rxQueueHandle != NULL)
+  {
+    osMessageQueueDelete(rxQueueHandle);
+    rxQueueHandle = NULL;
+  }
+
+  // 删除互斥锁
+  if (txMutexHandle != NULL)
+  {
+    osMutexDelete(txMutexHandle);
+    txMutexHandle = NULL;
+  }
+
+  // 停止FDCAN外设
+  if (_hfdcan != nullptr)
+  {
+    HAL_FDCAN_Stop(_hfdcan);
+  }
+}
+
 // 初始化成员，需要在freertos内核初始化之后进行
 HAL_StatusTypeDef bsp_can::init()
 {
-  // 创建 FreeRTOS 资源
-  rxQueueHandle = osMessageQueueNew(16, sizeof(can_rx_msg_t), NULL);
-  txMutexHandle = osMutexNew(NULL);
+  // 创建 FreeRTOS 资源，使用实例ID作为唯一标识
+  snprintf(queue_name, sizeof(queue_name), "CAN%dRx_Queue", _instanceId);
+
+  const osMessageQueueAttr_t queue_attr =
+    {
+      .name      = queue_name,
+      .attr_bits = 0,
+      .cb_mem    = NULL,
+      .cb_size   = 0,
+      .mq_mem    = NULL,
+      .mq_size   = 0};
+
+  rxQueueHandle = osMessageQueueNew(16, sizeof(can_rx_msg_t), &queue_attr);
+
+  snprintf(mutex_name, sizeof(mutex_name), "CAN%dTx_Mutex", _instanceId);
+
+  const osMutexAttr_t mutex_attr =
+    {
+      .name      = mutex_name,
+      .attr_bits = 0,
+      .cb_mem    = NULL,
+      .cb_size   = 0};
+
+  txMutexHandle = osMutexNew(&mutex_attr);
 
   // 2. FDCAN 硬件配置 (过滤器等)
   FDCAN_FilterTypeDef sFilterConfig;
