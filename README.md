@@ -5,12 +5,11 @@
 # todo
 
 小项目先实现：
-- 收发协议层
 - 云台类
-- SPI-Flash
+- USB-HID和CDC
 
 总计实现：
-- USB-HID和CDC
+- SPI-Flash
 - 测试H7新功能 CORTEX_M7栏目内容
 - 移植dsp库
 - 写SPI/IIC的驱动
@@ -33,7 +32,7 @@ root
 │                   |`settings`根据自己电脑修改工具链位置（clangd）
 │                   |`tasks`是终端执行的任务 看自己改不改了
 ├─build             |---
-│  └─Debug          |这里面有一个`compile_commands.json`（clangd）
+│  └─Debug          |这里面有一个`compile_commands.json`（clangd）以及编译出的东西
 ├─cmake             |---
 │  └─stm32cubemx    |没病不用动
 ├─Core              |---

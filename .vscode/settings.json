@@ -14,5 +14,6 @@
                                             
     ],
     "clangd.checkUpdates": true,
+    "cortex-debug.variableUseNaturalFormat": false,
     
 }

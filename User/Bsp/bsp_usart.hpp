@@ -24,22 +24,21 @@ extern "C"
 // 最下面有类实现的对象的extern位置，当然extern可以在别的地方写。定义在.cpp中
 #if __cplusplus
 
+/**
+ * @brief 接收模式枚举
+ *
+ */
+enum class ReceiveMode
+{
+  LATEST_ONLY   = 1, // 仅保留最新一次接收到的数据（使用消息邮箱）（不能开FIFO）
+  SINGLE_BUFFER = 2, // 使用单个流缓冲区
+  DOUBLE_BUFFER = 3  // 使用双流缓冲区机制
+};
+
 // 模板的第一个数字为缓冲区大小（单位uint8_t） 第二个数字为消息队列的长度（uint8_t）
 template <size_t BUFFER_SIZE = 256, size_t MSG_SIZE = 8>
 class bsp_usart
 {
-
-public:
-  /**
-   * @brief 接收模式枚举
-   *
-   */
-  enum class ReceiveMode
-  {
-    LATEST_ONLY   = 1, // 仅保留最新一次接收到的数据（使用消息邮箱）（不能开FIFO）
-    SINGLE_BUFFER = 2, // 使用单个流缓冲区
-    DOUBLE_BUFFER = 3  // 使用双流缓冲区机制
-  };
 
 private:
   UART_HandleTypeDef  *_huart;                      ///< UART句柄指针，指向底层硬件接口

@@ -22,7 +22,7 @@
  *
  *   // 全局实例化类
  *   __attribute__((section(".dma_buffer")))
- *   bsp_usart<256, 8> bsp_usart6(&huart6, bsp_usart<256, 8>::ReceiveMode::LATEST_ONLY, true);
+ *   bsp_usart<256, 8> bsp_usart6(&huart6, ReceiveMode::LATEST_ONLY, true);
  *
  *    bsp_usart6.init();                              // 需要freertos内核初始化成功之后使用
  *
@@ -98,7 +98,7 @@ template class bsp_usart<256, 8>;
 // 这个 __attribute__((section(".dma_buffer"))) 是把他放到dtcm区域外，在.ld格式文件下实现的
 
 // __attribute__((section(".dma_buffer"))) bsp_usart<256, 8> bsp_usart6(&huart6, bsp_usart<256, 8>::ReceiveMode::LATEST_ONLY, true);
-__attribute__((section(".dma_buffer"))) bsp_usart<256, 8> bsp_usart6(&huart6, bsp_usart<256, 8>::ReceiveMode::SINGLE_BUFFER, true, 6); // 添加实例ID为6
+__attribute__((section(".dma_buffer"))) bsp_usart<256, 8> bsp_usart6(&huart6, ReceiveMode::SINGLE_BUFFER, true, 6); // 添加实例ID为6
 // __attribute__((section(".dma_buffer"))) bsp_usart<256, 8> bsp_usart6(&huart6, bsp_usart<256, 8>::ReceiveMode::DOUBLE_BUFFER, true);
 
 

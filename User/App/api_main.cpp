@@ -12,7 +12,6 @@
  *
  */
 
-
 #include "api_main.h"
 #include "main.h" // IWYU pragma: keep
 
@@ -20,8 +19,10 @@
 #include "cmsis_os2.h"
 
 #include "bsp_usart.hpp"
+
 #include "JC2804.hpp"
 
+#include "protocol_uart.hpp"
 
 /**
  * @brief main中初始化（无freertos）
@@ -35,8 +36,12 @@ void app_init()
 
 
 /* 创建对应句柄 handle */
-osThreadId_t can_rx_task_handle; // CAN 接收后处理任务
-
+osThreadId_t         can_rx_task_handle; // CAN 接收后处理任务
+const osThreadAttr_t can_rx_handler_task_attributes = {
+  .name       = "can_rx_task",
+  .stack_size = 128 * 4,
+  .priority   = (osPriority_t)osPriorityNormal,
+};
 
 /**
  * @brief 和freertos有关的初始化
@@ -49,20 +54,15 @@ void freertos_init()
   bsp_usart6.init();
   bsp_can1.init();
 
+  // 初始化协议
+  protocal_uart_6.init(_uart_protocol_task6);
 
   // 初始化云台双电机
   motor_yaw.init();
   motor_pitch.init();
-
-
-  // 创建 CAN 接收后处理任务 局部变量 传入就好
-  const osThreadAttr_t can_rx_handler_task_attributes = {
-    .name       = "can_rx_task",
-    .stack_size = 128 * 4,
-    .priority   = (osPriority_t)osPriorityNormal,
-  };
+  
+  // 创建 CAN 接收后处理任务
   can_rx_task_handle = osThreadNew(_can_rx_handler_task, nullptr, &can_rx_handler_task_attributes);
-
 
   printf("freertos_init_ok\n");
 }
@@ -91,19 +91,12 @@ void freertos_init()
  */
 extern "C" void _defaultTask(void *argument)
 {
-  motor_yaw.enter_closed_loop();
-  osDelay(100);
-  motor_yaw.set_control_mode(1); // 速度模式
-  osDelay(100);
-  // motor_yaw.set_speed(0);
-  // osDelay(100);
-
+  uint8_t data[4] = {0x01, 0x02, 0x04, 0x08};
+  printf("Default Task Started\n");
   for (;;)
   {
-    motor_yaw.set_speed(30);
-    osDelay(3);
-    motor_yaw.set_speed(-30);
-    osDelay(3);
+    protocal_uart_6.send(0x01, data, 4);
+    osDelay(1000);
   }
 }
 
@@ -114,6 +107,7 @@ extern "C" void _defaultTask(void *argument)
  */
 extern "C" void _can_rx_handler_task(void *argument)
 {
+  printf("CAN RX Task Started\n");
   can_rx_msg_t rx_msg;
 
   for (;;)
@@ -137,3 +131,5 @@ extern "C" void _can_rx_handler_task(void *argument)
     }
   }
 }
+
+// 串口协议处理函数，在串口协议处创建并定义
