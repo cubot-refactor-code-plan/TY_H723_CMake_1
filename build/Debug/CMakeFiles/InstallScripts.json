@@ -1,8 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/cmake_install.cmake",
-		"D:/Users/admin/Desktop/26/TY_H723_CMake_1/build/Debug/cmake/stm32cubemx/cmake_install.cmake"
-	],
-	"Parallel" : false
-}
