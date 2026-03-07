@@ -1,3 +1,6 @@
+#ifndef __DJIMOTOR_H_HPP__
+#define __DJIMOTOR_H_HPP__
+
 #include "bsp_can.hpp"
 #include <cstdint>
 
@@ -80,3 +83,5 @@ class Motor2006 : public RM_Motor{
 public:
   Motor2006(BspCan* can, uint8_t id, uint16_t ecd_offset, float gearRatio);
 };
+
+#endif // __DJIMOTOR_HPP__
