@@ -73,7 +73,7 @@ typedef enum reg_id_e
  * @param device_id 设备id
  * @param master_id 主机id
  */
-dm_imu::dm_imu(bsp_can* can_bus, uint8_t device_id, uint8_t master_id) : _device_id(device_id), _master_id(master_id), _can_bus(can_bus)
+dm_imu::dm_imu(BspCan* can_bus, uint8_t device_id, uint8_t master_id) : _device_id(device_id), _master_id(master_id), _can_bus(can_bus)
 {
   // 初始化内部数据结构
   memset(&_imu_data, 0, sizeof(_imu_data));

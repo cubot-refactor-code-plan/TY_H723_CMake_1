@@ -2,29 +2,37 @@
 #define __BSP_CAN_HPP__
 
 #include "fdcan.h"    // IWYU pragma: keep
-#include "cmsis_os.h" // IWYU pragma: keep
+#include "cmsis_os2.h" // IWYU pragma: keep
+#include "stm32h7xx_hal_fdcan.h"
+#include <cstdint>
 
 
 // CAM接收信息结构体接口
-typedef struct
+struct can_rx_msg_t
 {
   FDCAN_RxHeaderTypeDef header;
   uint8_t               data[8];
-} can_rx_msg_t;
+};
+
+struct can_tx_msg_t
+{
+  FDCAN_TxHeaderTypeDef header;
+  uint8_t               data[8];
+};
 
 
 // CAN类
-class bsp_can
+class BspCan
 {
 public:
-  osMessageQueueId_t rx_queue_handle; // CMSIS_OS2的队列
-  osMutexId_t        tx_mutex_handle; // CMSIS_OS2的互斥锁
+  osMessageQueueId_t rxQueueHandle; // CMSIS_OS2的队列
+  osMutexId_t        txMutexHandle; // CMSIS_OS2的互斥锁
 
-  // 构造函数，增加instance_id参数用于区分不同的实例
-  bsp_can(FDCAN_HandleTypeDef* hfdcan, int instance_id);
+  // 构造函数，增加instanceId参数用于区分不同的实例
+  BspCan(FDCAN_HandleTypeDef* hfdcan, int instanceId);
 
   // 析构函数
-  ~bsp_can();
+  ~BspCan();
 
   // 启动 FDCAN 并配置过滤器
   HAL_StatusTypeDef init();
@@ -37,7 +45,7 @@ public:
 
 private:
   FDCAN_HandleTypeDef* _hfdcan;        // CAN句柄
-  int                  _instance_id;    // 实例ID，
+  int                  _instanceId;    // 实例ID，
   char                 queue_name[32]; // 实例队列的名字，用于调试时看到名字
   char                 mutex_name[32]; // 实例互斥锁的名字，用于调试时看到名字
 };
@@ -45,7 +53,25 @@ private:
 
 // 外部声明这些类实例化的对象
 
-extern bsp_can bsp_can1;
+extern BspCan bsp_can1;
+extern BspCan bsp_can2;
 
+// 一条can线上的can设备数上限
+#define MAX_DIVICE_IN_ONE_CAN 10 
+
+/**
+ * @brief 抽象类CanItem定义了任何通过Can通信运行的对象
+ * 
+ */
+class CanItem 
+{
+protected:
+  BspCan* bsp_can;
+  can_rx_msg_t rxMsg;
+public:
+  CanItem(BspCan* can) ;
+  virtual void receive(can_rx_msg_t rxMsg) = 0;
+  virtual void send(uint8_t* data, uint8_t len) = 0;
+};
 
 #endif // __BSP_CAN_HPP__

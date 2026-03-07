@@ -59,7 +59,7 @@ const float jc2804::TEMPERATURE_SCALE = 0.1f;
  * @param can_interface can对象
  * @param device_id 偏移id
  */
-jc2804::jc2804(bsp_can* can_interface, uint8_t device_id)
+jc2804::jc2804(BspCan* can_interface, uint8_t device_id)
 
   : _device_id(device_id),
     _last_request_type(NONE_REQUEST),

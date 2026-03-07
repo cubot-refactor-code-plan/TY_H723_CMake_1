@@ -16,7 +16,7 @@
  *
  * @note 类的实例化 以及初始化
  *
- *   bsp_can bsp_can1(&hfdcan1); // 全局实例化类
+ *   BspCan bsp_can1(&hfdcan1); // 全局实例化类
  *   bsp_can1.init();            // 需要在freertos内核开启之后去init
  *   can_rx_msg_t can1_msg;      // 实例化一个接收消息用的msg
  *
@@ -28,12 +28,14 @@
  */
 
 #include "bsp_can.hpp"
+#include <stdint.h>
 #include <stdio.h>
 #include <string.h>
 
 /* 全局实例化类对象 */
 
-bsp_can bsp_can1(&hfdcan1, 1);
+BspCan bsp_can1(&hfdcan1, 1);
+BspCan bsp_can2(&hfdcan2, 2);
 
 
 /* 中断回调函数 */
@@ -47,9 +49,9 @@ extern "C" void HAL_FDCAN_RxFifo0Callback(FDCAN_HandleTypeDef* hfdcan, uint32_t 
     if (HAL_FDCAN_GetRxMessage(hfdcan, FDCAN_RX_FIFO0, &rxMsg.header, rxMsg.data) == HAL_OK)
     {
       // 注意：CMSIS osMessageQueuePut 在 ISR 中使用时，timeout 必须为 0
-      if (bsp_can1.rx_queue_handle != NULL)
+      if (bsp_can1.rxQueueHandle != NULL)
       {
-        osMessageQueuePut(bsp_can1.rx_queue_handle, &rxMsg, 0, 0);
+        osMessageQueuePut(bsp_can1.rxQueueHandle, &rxMsg, 0, 0);
       }
     }
     // 之后可拓展其他CAN......
@@ -78,30 +80,30 @@ extern "C" void HAL_FDCAN_TxBufferCompleteCallback(FDCAN_HandleTypeDef* hfdcan, 
  *
  * @param hfdcan 传入到构造函数的句柄
  */
-bsp_can::bsp_can(FDCAN_HandleTypeDef* hfdcan, int instance_id)
+BspCan::BspCan(FDCAN_HandleTypeDef* hfdcan, int instanceId)
 
   : _hfdcan(hfdcan),
-    _instance_id(instance_id)
+    _instanceId(instanceId)
 {
-  rx_queue_handle = NULL;
-  tx_mutex_handle = NULL;
+  rxQueueHandle = NULL;
+  txMutexHandle = NULL;
 }
 
 // 析构函数
-bsp_can::~bsp_can()
+BspCan::~BspCan()
 {
   // 删除消息队列
-  if (rx_queue_handle != NULL)
+  if (rxQueueHandle != NULL)
   {
-    osMessageQueueDelete(rx_queue_handle);
-    rx_queue_handle = NULL;
+    osMessageQueueDelete(rxQueueHandle);
+    rxQueueHandle = NULL;
   }
 
   // 删除互斥锁
-  if (tx_mutex_handle != NULL)
+  if (txMutexHandle != NULL)
   {
-    osMutexDelete(tx_mutex_handle);
-    tx_mutex_handle = NULL;
+    osMutexDelete(txMutexHandle);
+    txMutexHandle = NULL;
   }
 
   // 停止FDCAN外设
@@ -112,10 +114,10 @@ bsp_can::~bsp_can()
 }
 
 // 初始化成员，需要在freertos内核初始化之后进行
-HAL_StatusTypeDef bsp_can::init()
+HAL_StatusTypeDef BspCan::init()
 {
   // 创建 FreeRTOS 资源，使用实例ID作为唯一标识
-  snprintf(queue_name, sizeof(queue_name), "CAN%dRx_Queue", _instance_id);
+  snprintf(queue_name, sizeof(queue_name), "CAN%dRx_Queue", _instanceId);
 
   const osMessageQueueAttr_t queue_attr =
     {
@@ -126,9 +128,9 @@ HAL_StatusTypeDef bsp_can::init()
       .mq_mem    = NULL,
       .mq_size   = 0};
 
-  rx_queue_handle = osMessageQueueNew(16, sizeof(can_rx_msg_t), &queue_attr);
+  rxQueueHandle = osMessageQueueNew(16, sizeof(can_rx_msg_t), &queue_attr);
 
-  snprintf(mutex_name, sizeof(mutex_name), "CAN%dTx_Mutex", _instance_id);
+  snprintf(mutex_name, sizeof(mutex_name), "CAN%dTx_Mutex", _instanceId);
 
   const osMutexAttr_t mutex_attr =
     {
@@ -137,7 +139,7 @@ HAL_StatusTypeDef bsp_can::init()
       .cb_mem    = NULL,
       .cb_size   = 0};
 
-  tx_mutex_handle = osMutexNew(&mutex_attr);
+  txMutexHandle = osMutexNew(&mutex_attr);
 
   // 2. FDCAN 硬件配置 (过滤器等)
   FDCAN_FilterTypeDef sFilterConfig;
@@ -190,7 +192,7 @@ HAL_StatusTypeDef bsp_can::init()
  * @param len   长度
  * @return HAL_StatusTypeDef 返回值同hal
  */
-HAL_StatusTypeDef bsp_can::send(uint32_t stdId, uint8_t* pData, uint8_t len)
+HAL_StatusTypeDef BspCan::send(uint32_t stdId, uint8_t* pData, uint8_t len)
 {
   FDCAN_TxHeaderTypeDef txHeader;
 
@@ -241,9 +243,9 @@ HAL_StatusTypeDef bsp_can::send(uint32_t stdId, uint8_t* pData, uint8_t len)
   txHeader.MessageMarker       = stdId; // 使用ID作为消息标记
 
   // 使用互斥锁防止多任务同时写发送寄存器
-  if (tx_mutex_handle != NULL)
+  if (txMutexHandle != NULL)
   {
-    osMutexAcquire(tx_mutex_handle, osWaitForever);
+    osMutexAcquire(txMutexHandle, osWaitForever);
   }
 
   // 检查 FIFO 是否有空间，如果有这个问题的去加大发送区域fifo
@@ -255,9 +257,9 @@ HAL_StatusTypeDef bsp_can::send(uint32_t stdId, uint8_t* pData, uint8_t len)
   {
     if (++timeoutCount > maxTimeout)
     {
-      if (tx_mutex_handle != NULL)
+      if (txMutexHandle != NULL)
       {
-        osMutexRelease(tx_mutex_handle);
+        osMutexRelease(txMutexHandle);
       }
       return HAL_TIMEOUT; // 超时返回
     }
@@ -266,14 +268,18 @@ HAL_StatusTypeDef bsp_can::send(uint32_t stdId, uint8_t* pData, uint8_t len)
 
   HAL_StatusTypeDef status = HAL_FDCAN_AddMessageToTxFifoQ(_hfdcan, &txHeader, pData);
 
-  if (tx_mutex_handle != NULL)
+  if (txMutexHandle != NULL)
   {
-    osMutexRelease(tx_mutex_handle);
+    osMutexRelease(txMutexHandle);
   }
   return status;
 }
 
-
+// canItem注册表
+CanItem* can1Item_ptr[MAX_DIVICE_IN_ONE_CAN];
+CanItem* can2Item_ptr[MAX_DIVICE_IN_ONE_CAN];
+// 已注册数量
+uint8_t can1Item_num, can2Item_num;
 /**
  * @brief can接收函数，在中断中读取，此处为获得存入的消息队列的数据
  *
@@ -284,12 +290,27 @@ HAL_StatusTypeDef bsp_can::send(uint32_t stdId, uint8_t* pData, uint8_t len)
  * @param timeout 等待数据的时间
  * @return osStatus_t CMSIS_OS2的返回值
  */
-osStatus_t bsp_can::receive(can_rx_msg_t* msg, uint32_t timeout)
+osStatus_t BspCan::receive(can_rx_msg_t* msg, uint32_t timeout)
 {
   // 封装 CMSIS 队列接收
-  if (rx_queue_handle == NULL)
+  if (rxQueueHandle == NULL)
   {
     return osErrorResource;
   }
-  return osMessageQueueGet(rx_queue_handle, msg, NULL, timeout);
+  return osMessageQueueGet(rxQueueHandle, msg, NULL, timeout);
+}
+
+CanItem::CanItem(BspCan* can) : bsp_can(can){
+  if (can == &bsp_can1){
+    if (can1Item_num < MAX_DIVICE_IN_ONE_CAN){
+      can1Item_ptr[can1Item_num] = this;
+      can1Item_num ++;
+    }
+  }
+  if (can == &bsp_can2){
+    if (can2Item_num < MAX_DIVICE_IN_ONE_CAN){
+      can2Item_ptr[can2Item_num] = this;
+      can2Item_num ++;
+    }
+  }
 }

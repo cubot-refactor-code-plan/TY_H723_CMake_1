@@ -25,7 +25,7 @@ public:
   /* 构造与初始化 */
 
   // 构造函数
-  jc2804(bsp_can* can_interface, uint8_t device_id);
+  jc2804(BspCan* can_interface, uint8_t device_id);
 
   // 析构函数
   ~jc2804();
@@ -165,7 +165,7 @@ private:
   };
 
   RequestType _last_request_type;
-  bsp_can*    _can;
+  BspCan*    _can;
   MotorData   latest_data;    // 最新数据存储（使用结构体）
 
 

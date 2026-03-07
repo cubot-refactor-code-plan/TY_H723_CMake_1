@@ -94,7 +94,7 @@ public:
    * @param device_id 设备ID
    * @param master_id 主机ID
    */
-  dm_imu(bsp_can* can_bus, uint8_t device_id, uint8_t master_id = 0);
+  dm_imu(BspCan* can_bus, uint8_t device_id, uint8_t master_id = 0);
 
   /**
    * @brief 析构函数
@@ -216,7 +216,7 @@ private:
   void update_quaternion(uint8_t* pData);
   void process_received_data(uint8_t* pData);
 
-  bsp_can* _can_bus;  // CAN总线接口
+  BspCan* _can_bus;  // CAN总线接口
   imu_data _imu_data; // IMU数据
   char     name[32];  // 互斥锁名字
 
