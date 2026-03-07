@@ -300,6 +300,14 @@ osStatus_t BspCan::receive(can_rx_msg_t* msg, uint32_t timeout)
   return osMessageQueueGet(rxQueueHandle, msg, NULL, timeout);
 }
 
+void CanItem::receive(can_rx_msg_t rxMsg) 
+{
+  if (rxMsg.header.Identifier == this->canId) {
+    this->rxMsg = rxMsg;
+    callback(rxMsg.data); // 调用回调函数处理数据
+  }
+}
+
 CanItem::CanItem(BspCan* can) : bsp_can(can){
   if (can == &bsp_can1){
     if (can1Item_num < MAX_DIVICE_IN_ONE_CAN){

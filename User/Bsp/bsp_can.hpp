@@ -68,9 +68,11 @@ class CanItem
 protected:
   BspCan* bsp_can;
   can_rx_msg_t rxMsg;
+  uint32_t canId; // 该设备监听的CAN ID
 public:
   CanItem(BspCan* can) ;
-  virtual void receive(can_rx_msg_t rxMsg) = 0;
+  void receive(can_rx_msg_t rxMsg);
+  virtual void callback(uint8_t* data) = 0; // 正确接收到数据后执行的回调函数，纯虚函数需要子类实现
   virtual void send(uint8_t* data, uint8_t len) = 0;
 };
 

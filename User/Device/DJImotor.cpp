@@ -106,6 +106,7 @@ Motor3508::Motor3508(BspCan* can, uint8_t id, uint16_t ecd_offset, float gearRat
   if ( id >= 5 && id <= 8 && bsp_can == &bsp_can2 ){
     txBuffer = &CanTxBuffer0x1FFforCan2;
   }
+  this->canId = 0x200 + id; // 3508的CAN ID为0x201-0x208
 }
 
 Motor6020::Motor6020(BspCan* can, uint8_t id, uint16_t ecd_offset, float gearRatio, Motor6020ControlMode mode) : RM_Motor(can, id, ecd_offset, gearRatio) , controlMode(mode){
@@ -143,6 +144,7 @@ Motor6020::Motor6020(BspCan* can, uint8_t id, uint16_t ecd_offset, float gearRat
       txBuffer = &CanTxBuffer0x2FEforCan2;
     }
   }
+  this->canId = 0x204 + id;
 }
 
 Motor2006::Motor2006(BspCan* can, uint8_t id, uint16_t ecd_offset, float gearRatio) : RM_Motor(can, id, ecd_offset, gearRatio) {
@@ -164,6 +166,7 @@ Motor2006::Motor2006(BspCan* can, uint8_t id, uint16_t ecd_offset, float gearRat
   if ( id >= 5 && id <= 8 && bsp_can == &bsp_can2 ){
     txBuffer = &CanTxBuffer0x1FFforCan2;
   }
+  this->canId = 0x200 + id; // 2006的CAN ID为0x201-0x208
 }
 
 static void updateData(RawData_t rawData, can_rx_msg_t rxMsg){
@@ -192,15 +195,10 @@ static void EcdToAngle(RawData_t rawData, TreatedData_t treatedData, MotorParam_
 
 }
 
-void RM_Motor::receive(can_rx_msg_t rxMsg) 
+void RM_Motor::callback(uint8_t* data) 
 {
-  if (rxMsg.header.Identifier == (0x200 + (uint32_t)this->motorParam.motor_id)) {
-    this->rxMsg = rxMsg;
-  }
-
   updateData(rawData, this->rxMsg);
   EcdToAngle(rawData, treatedData, motorParam);
-
 }
 
 void RM_Motor::send(uint8_t* data, uint8_t len)

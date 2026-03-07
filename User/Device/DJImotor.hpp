@@ -55,7 +55,7 @@ public:
   MotorParam_t motorParam;
 
   RM_Motor(BspCan* can, uint8_t id, uint16_t ecd_offset, float gearRatio);
-  void receive(can_rx_msg_t rxMsg) override;
+  void callback(uint8_t* data) override;
   void send(uint8_t* data, uint8_t len) override;
   void filldata(int32_t output);
 protected:

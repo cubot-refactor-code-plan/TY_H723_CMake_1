@@ -106,6 +106,11 @@ extern "C" void _defaultTask(void *argument)
 }
 
 
+// canItem注册表
+extern CanItem* can1Item_ptr[MAX_DIVICE_IN_ONE_CAN];
+extern CanItem* can2Item_ptr[MAX_DIVICE_IN_ONE_CAN];
+// 已注册数量
+extern uint8_t can1Item_num, can2Item_num;
 /**
  * @brief 用于处理CAN接收后的数据处理任务
  *
@@ -124,7 +129,7 @@ extern "C" void _can_rx_handler_task(void *argument)
       // 根据 ID 判断是哪个设备
       uint32_t device_id = rx_msg.header.Identifier & 0x0F; // 0x600+ID -> ID 是低4位
 
-      // 查找对应的 jc2804 实例
+      // 查找对应的 JC2804 实例
       if (device_id == motor_yaw._device_id)
       {
         motor_yaw.on_can_message(&rx_msg);
@@ -137,6 +142,11 @@ extern "C" void _can_rx_handler_task(void *argument)
       else if (device_id == (imu_bmi088._master_id & 0x0F))
       {
         imu_bmi088.on_can_message(&rx_msg);
+      }
+      else {
+        for (int i = 0; i < can1Item_num && can1Item_ptr[i] != nullptr; i++){
+          can1Item_ptr[i]->receive(rx_msg);   // 调用can1上的所有canItem的接收回调，轮询rx_msg信息
+        }
       }
     }
   }

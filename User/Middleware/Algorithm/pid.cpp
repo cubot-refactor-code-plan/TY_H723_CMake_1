@@ -30,7 +30,6 @@
  * pid.Calc(tar,motor.angle,motor.speed);   // 最后一个参数是可去掉的 
  */
 #include "pid.hpp"
-#include "stm32h7xx_hal_uart.h"
 #include <cmath>
 #include <functional>
 #include <numeric>
