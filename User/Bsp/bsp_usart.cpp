@@ -75,42 +75,49 @@ extern "C"
  */
 void idle_iqr_handler(UART_HandleTypeDef *huart)
 {
-  // 强制检查并清除错误标志 测试发现有一点点意义 但是不知道原因（
-  if (__HAL_UART_GET_FLAG(&huart1, UART_FLAG_ORE) != RESET)
-  {
-    __HAL_UART_CLEAR_FLAG(&huart1, UART_CLEAR_OREF);
-
-    // 写这个的原因是他会直接重启接收
-    if (huart == &huart6)
-    {
-      bsp_usart6.handle_idle_interrupt_internal(huart); // 让类内部处理DMA计数器和BUFFER_SIZE
-    }
-    else if (huart == &huart9)
-    {
-      bsp_usart9.handle_idle_interrupt_internal(huart);
-    }
-  }
-
   // 检查是否是IDLE中断
   if ((__HAL_UART_GET_FLAG(huart, UART_FLAG_IDLE) != RESET) && (__HAL_UART_GET_IT_SOURCE(huart, UART_IT_IDLE) != RESET))
   {
     // 清除IDLE中断标志
-    __HAL_UART_CLEAR_FLAG(huart, UART_FLAG_IDLE);
+    __HAL_UART_CLEAR_IDLEFLAG(huart);
 
     // 写不了switch case
     if (huart == &huart6)
     {
-      bsp_usart6.handle_idle_interrupt_internal(huart); // 让类内部处理DMA计数器和BUFFER_SIZE
+      // 让类内部处理DMA计数器和BUFFER_SIZE 以及错误处理
+      bsp_usart6.handle_idle_interrupt_internal(huart); 
     }
     else if (huart == &huart9)
     {
       bsp_usart9.handle_idle_interrupt_internal(huart);
     }
+    else
     {
       // 其他UART句柄的处理
     }
   }
 
+  // 强制检查并清除错误标志，每次发都会进clear？测试发现会解决一段时间的异常，但是还是会出问题
+  if (__HAL_UART_GET_FLAG(huart, UART_FLAG_ORE) != RESET)
+  {
+    __HAL_UART_CLEAR_OREFLAG(huart);
+    __HAL_UART_CLEAR_IDLEFLAG(huart);
+
+    // 写不了switch case
+    if (huart == &huart6)
+    {
+      // 让类内部处理DMA计数器和BUFFER_SIZE 以及错误处理
+      bsp_usart6.handle_idle_interrupt_internal(huart); // 让类内部处理DMA计数器和BUFFER_SIZE
+    }
+    else if (huart == &huart9)
+    {
+      bsp_usart9.handle_idle_interrupt_internal(huart);
+    }
+    else
+    {
+      // 其他UART句柄的处理
+    }
+  }
 }
 
 
@@ -607,6 +614,10 @@ void bsp_usart<BUFFER_SIZE, MSG_SIZE>::handle_idle_interrupt_internal(UART_Handl
   if (received_length > 0)
   {
     handle_idle_interrupt(received_length);
+  }
+  else 
+  {
+    dma_error_callback(huart);
   }
 }
 
