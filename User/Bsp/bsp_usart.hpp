@@ -5,7 +5,7 @@
  * @version 0.1
  * @date 2026-02-08
  *
- * @todo 回调函数中只写了UART6，具体的其他函数处理需要自己添加进来，或者使用更先进的方式
+ * @todo 目前使用查表法存入回调函数中，可能查询速度会慢，希望后人处理
  *
  * @copyright Copyright (c) 2026
  *
@@ -24,7 +24,7 @@
  *
  *   bsp_usart6.init();                              // 需要freertos内核初始化成功之后使用
  *
- * @note extern好之后，在任务中使用
+ * @note extern好之后，在任务中使用 发送时记得不能不阻塞发送，delay1发送就可以，不delay他不处理
  *
  *    bsp_usart6.receive(buffer,8,osWaitForever); // 这样就存到buffer中了 时间是一直等
  *    bsp_usart6.send(buffer,8);                  // 就把buffer中的数据发送出去了
@@ -34,10 +34,10 @@
 #ifndef __BSP_USART_HPP__
 #define __BSP_USART_HPP__
 
-#include "FreeRTOS.h" // IWYU pragma: keep
-#include "usart.h"    // IWYU pragma: keep
 #include "cmsis_os2.h"
+#include "FreeRTOS.h" // IWYU pragma: keep
 #include "stream_buffer.h"
+#include "usart.h" // IWYU pragma: keep
 
 
 /**
@@ -62,7 +62,7 @@ private:
   osMessageQueueId_t   _msg_queue_id;               ///< CMSIS-RTOS2消息队列ID，用于LATEST_ONLY模式
   StreamBufferHandle_t _rx_stream_buffers[2];       ///< 接收流缓冲区数组，[0]为单缓冲或双缓冲第一个，[1]为双缓冲第二个
   StreamBufferHandle_t _tx_stream_buffer;           ///< FreeRTOS发送流缓冲区句柄
-  receive_mode          _receive_mode;               ///< 接收模式，指定数据接收策略
+  receive_mode         _receive_mode;               ///< 接收模式，指定数据接收策略
   bool                 _rx_active;                  ///< 接收状态标志，指示是否正在接收数据
   uint8_t              _rx_dma_buffer[BUFFER_SIZE]; ///< DMA接收缓冲区，用于多字节接收
   uint8_t              _tx_dma_buffer[BUFFER_SIZE]; ///< DMA发送缓冲区，用于多字节发送
@@ -74,6 +74,11 @@ private:
   int                  _instance_id;                ///< 实例ID，用于生成唯一资源名称
   char                 mutex_name[32];              ///< 实例互斥锁的名字，用于调试时看到名字
   char                 msgq_name[32];               ///< 实例消息队列的名字，用于调试时看到名字
+
+  // 静态成员：实例注册表，用于通过UART句柄查找对应的bsp_usart实例
+  static constexpr size_t MAX_INSTANCES = 10;        ///< 最大支持的实例数量
+  static bsp_usart       *_instances[MAX_INSTANCES]; ///< 静态实例指针数组
+  static size_t           _instance_count;           ///< 当前已注册的实例数量
 
 
 public:
@@ -160,7 +165,32 @@ public:
    *
    * @param huart UART句柄
    */
-  void handle_idle_interrupt_internal(UART_HandleTypeDef *huart,uint16_t Size);
+  void handle_idle_interrupt_internal(UART_HandleTypeDef *huart, uint16_t Size);
+
+  /**
+   * @brief TX发送完成处理函数 由TX Complete中断调用，用于继续发送剩余数据
+   */
+  void handle_tx_complete();
+
+  /**
+   * @brief 通过UART句柄查找对应的bsp_usart实例
+   *
+   * @note 静态成员函数，用于在中断回调中通过UART句柄找到对应的类实例
+   *
+   * @param huart UART句柄指针
+   * @return bsp_usart* 找到的实例指针，未找到返回nullptr
+   */
+  static bsp_usart *get_instance_by_handle(UART_HandleTypeDef *huart);
+
+  /**
+   * @brief 注册实例到静态注册表中
+   *
+   * @note 在构造函数中自动调用，将当前实例添加到注册表
+   *
+   * @return true 注册成功
+   * @return false 注册失败（已满或其他错误）
+   */
+  bool register_instance();
 
 private:
   // 开始接收数据 启动DMA接收
@@ -185,12 +215,18 @@ private:
 
   // 处理DMA错误 记录错误并尝试重新初始化
   void handle_dma_error();
+
+  // 获取UART句柄指针（供静态函数使用）
+  UART_HandleTypeDef *get_huart() const
+  {
+    return _huart;
+  }
 };
 
 
 // 外部声明这些类实例化的对象
 
-extern bsp_usart<256,8> bsp_usart6;
+extern bsp_usart<256, 8> bsp_usart6;
 extern bsp_usart<256, 8> bsp_usart9;
 
 

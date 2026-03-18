@@ -99,15 +99,15 @@ extern "C" void _defaultTask(void *argument)
 {
   osDelay(1000);
   printf("Default Task Started\n");
+  osDelay(1000);
 
-  uint8_t data[4] = {0};
+  uint8_t data[8] = {0};
   for (;;)
   {
-    bsp_usart6.receive(data,4);
+    bsp_usart6.receive(data,8);
+    bsp_usart6.send(data,8);
     osDelay(1);
-    bsp_usart6.send(data,4);
     // motor_pitch.set_low_speed(0);
-    osDelay(1000);
   }
 }
 

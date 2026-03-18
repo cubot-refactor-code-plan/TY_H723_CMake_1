@@ -7,48 +7,20 @@
 /* 声明串口句柄 */
 extern UART_HandleTypeDef huart1;
 extern UART_HandleTypeDef huart6;
+extern UART_HandleTypeDef huart9;
 
-/**
- * @brief IDLE串口回调函数
- * @note extern "C" 的原因是，这些函数是覆盖在原来weak弱定义上的，不能被cpp进行名称修饰
- */
-extern "C"
-{
-  void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
-  {
-    // 强制检查并清除错误标志，每次发都会进clear？测试发现会解决一段时间的异常，但是还是会出问题
-    if (__HAL_UART_GET_FLAG(huart, UART_FLAG_ORE) != RESET)
-    {
-      __HAL_UART_CLEAR_OREFLAG(huart);
-    }
-  
-    // 写不了switch case
-    if (huart == &huart6)
-    {
-      // 让类内部处理DMA计数器和BUFFER_SIZE 以及错误处理
-      bsp_usart6.handle_idle_interrupt_internal(huart, Size);
-    }
-    else if (huart == &huart9)
-    {
-      bsp_usart9.handle_idle_interrupt_internal(huart, Size);
-    }
-    else
-    {
-      // 其他UART句柄的处理
-    }
-  }
-}
+#define PRINT_UART &huart6
 
 /**
  * @brief 模板实例化实现
  * @param 第一个数字为缓冲区大小（uint8_t）
- * @param 第二个数字为消息队列的长度（uint8_t） 
+ * @param 第二个数字为消息队列的长度（uint8_t）
  *
  */
 template class bsp_usart<256, 8>;
 
 /**
- * @brief 全局实例化 
+ * @brief 全局实例化
  * @param 第一个串口句柄
  * @param 第二个是串口接收模式
  * @param 第三个是是否启用发送逻辑
@@ -56,29 +28,70 @@ template class bsp_usart<256, 8>;
  *
  */
 __attribute__((section(".dma_buffer"))) bsp_usart<256, 8> bsp_usart6(&huart6, receive_mode::SINGLE_BUFFER, true, 6); // 添加实例ID为6
-__attribute__((section(".dma_buffer"))) bsp_usart<256, 8> bsp_usart9(&huart9, receive_mode::SINGLE_BUFFER, true, 9); // 添加实例ID为6
+__attribute__((section(".dma_buffer"))) bsp_usart<256, 8> bsp_usart9(&huart9, receive_mode::SINGLE_BUFFER, true, 9); // 添加实例ID为9
 
 /* USER CODE END */
 
 
-#define PRINT_UART &huart6
+/**
+ * @brief 静态成员变量定义
+ * @note 模板类的静态成员需要在cpp文件中进行定义
+ */
+template <size_t BUFFER_SIZE, size_t MSG_SIZE>
+bsp_usart<BUFFER_SIZE, MSG_SIZE> *bsp_usart<BUFFER_SIZE, MSG_SIZE>::_instances[bsp_usart<BUFFER_SIZE, MSG_SIZE>::MAX_INSTANCES] = {nullptr};
+
+template <size_t BUFFER_SIZE, size_t MSG_SIZE>
+size_t bsp_usart<BUFFER_SIZE, MSG_SIZE>::_instance_count = 0;
 
 /**
- * @brief ARM_GCC UART6 串口重定向、但阻塞 (printf)、使用了cubemx自带的设置，为重定向自动加锁
- * @note extern "C" 的原因是，这些函数是覆盖在原来weak弱定义上的，不能被cpp进行名称修饰
+ * @brief 构造函数中自动注册实例
+ * @note 在构造函数中调用register_instance，将当前实例注册到静态注册表中
  */
+
+
 extern "C"
 {
+  /**
+   * @brief ARM_GCC UART6 串口重定向、但阻塞 (printf)、使用了cubemx自带的设置，为重定向自动加锁
+   * @note extern "C" 的原因是，这些函数是覆盖在原来weak弱定义上的，不能被cpp进行名称修饰
+   */
   int __io_putchar(int ch)
   {
     HAL_UART_Transmit(PRINT_UART, (uint8_t *)&ch, 1, HAL_MAX_DELAY);
     return ch;
   }
-
   int _write(int fd, char *ptr, int len)
   {
     HAL_UART_Transmit(PRINT_UART, (uint8_t *)ptr, len, HAL_MAX_DELAY);
     return len;
+  }
+
+  /**
+   * @brief IDLE串口回调函数
+   * @note 使用指针方式查找对应UART句柄的实例，无需if-else判断
+   */
+  void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
+  {
+    // 通过UART句柄指针查找对应的bsp_usart实例并处理
+    bsp_usart<256, 8> *instance = bsp_usart<256, 8>::get_instance_by_handle(huart);
+    if (instance != nullptr)
+    {
+      // 找到对应实例，调用内部处理函数
+      instance->handle_idle_interrupt_internal(huart, Size);
+    }
+  }
+
+  /**
+   * @brief UART TX Complete 回调函数
+   * @note 发送完成时触发，用于继续发送剩余数据
+   */
+  void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
+  {
+    bsp_usart<256, 8> *instance = bsp_usart<256, 8>::get_instance_by_handle(huart);
+    if (instance != nullptr)
+    {
+      instance->handle_tx_complete();
+    }
   }
 }
 
@@ -125,6 +138,9 @@ bsp_usart<BUFFER_SIZE, MSG_SIZE>::bsp_usart(UART_HandleTypeDef *huart, receive_m
   _rx_stream_buffers[0] = nullptr;
   _rx_stream_buffers[1] = nullptr;
   _tx_stream_buffer     = nullptr;
+
+  // 注册当前实例到静态注册表中
+  register_instance();
 }
 
 template <size_t BUFFER_SIZE, size_t MSG_SIZE>
@@ -469,9 +485,25 @@ bool bsp_usart<BUFFER_SIZE, MSG_SIZE>::is_transmitting()
   return (_huart->gState == HAL_UART_STATE_BUSY_TX);
 }
 
+// 发送完成处理函数 (由 TX Complete 中断调用)
+template <size_t BUFFER_SIZE, size_t MSG_SIZE>
+void bsp_usart<BUFFER_SIZE, MSG_SIZE>::handle_tx_complete()
+{
+  if (_tx_stream_buffer == nullptr || !_transmit_enable)
+  {
+    return;
+  }
+
+  // 检查发送缓冲区是否还有数据，如果有则继续发送
+  if (xStreamBufferBytesAvailable(_tx_stream_buffer) > 0)
+  {
+    start_transmission();
+  }
+}
+
 // IDLE中断处理函数
 template <size_t BUFFER_SIZE, size_t MSG_SIZE>
-void bsp_usart<BUFFER_SIZE, MSG_SIZE>::handle_idle_interrupt(uint32_t received_length)
+void bsp_usart<BUFFER_SIZE, MSG_SIZE>::           handle_idle_interrupt(uint32_t received_length)
 {
   _last_received_length = received_length;
 
@@ -526,20 +558,26 @@ void bsp_usart<BUFFER_SIZE, MSG_SIZE>::handle_idle_interrupt(uint32_t received_l
       }
       else // DOUBLE_BUFFER
       {
+        // 修复：先获取当前使用的缓冲区，再切换
         target_buffer   = _current_buffer ? _rx_stream_buffers[1] : _rx_stream_buffers[0];
-        _current_buffer = !_current_buffer; // 双缓冲切换
       }
 
       // 1. 停止当前 DMA 传输，确保状态干净
       HAL_UART_DMAStop(_huart);
 
       // 2. 将数据发送到流缓冲区
-      if (target_buffer != nullptr)
+      if (target_buffer != nullptr && received_length > 0)
       {
         xStreamBufferSendFromISR(target_buffer, _rx_dma_buffer, received_length, nullptr);
       }
 
-      // 3. 重新启动接收
+      // 3. 切换到下一个缓冲区（双缓冲模式）
+      if (_receive_mode == receive_mode::DOUBLE_BUFFER)
+      {
+        _current_buffer = !_current_buffer;
+      }
+
+      // 4. 重新启动接收
       if (_rx_active)
       {
         HAL_UARTEx_ReceiveToIdle_DMA(_huart, _rx_dma_buffer, BUFFER_SIZE);
@@ -551,7 +589,7 @@ void bsp_usart<BUFFER_SIZE, MSG_SIZE>::handle_idle_interrupt(uint32_t received_l
   }
 }
 
-// IDLE中断处理函数
+// IDLE中断处理函数 (简化版)
 template <size_t BUFFER_SIZE, size_t MSG_SIZE>
 void bsp_usart<BUFFER_SIZE, MSG_SIZE>::handle_idle_interrupt_internal(UART_HandleTypeDef *huart, uint16_t Size)
 {
@@ -559,13 +597,20 @@ void bsp_usart<BUFFER_SIZE, MSG_SIZE>::handle_idle_interrupt_internal(UART_Handl
   uint32_t dma_counter     = __HAL_DMA_GET_COUNTER(huart->hdmarx);
   uint32_t received_length = BUFFER_SIZE - dma_counter;
 
-  // 处理接收到的数据包
+  // 优先使用 Size 参数（HAL 提供的值更可靠）
+  // 只有在 Size 为 0 且 DMA 计数器不等于 BufferSize 时才认为是错误
   if (Size > 0)
   {
+    // 正常接收完成，处理数据
     handle_idle_interrupt(Size);
   }
-  else if(received_length != Size)
+  else if (received_length == 0 && dma_counter == BUFFER_SIZE)
   {
+    // 没有收到任何数据，可能是虚假中断，忽略
+  }
+  else
+  {
+    // 其他情况视为错误
     dma_error_callback(huart);
   }
 }
@@ -593,4 +638,37 @@ void bsp_usart<BUFFER_SIZE, MSG_SIZE>::handle_dma_error()
   {
     start_reception();
   }
+}
+
+// 注册实例到静态注册表中
+template <size_t BUFFER_SIZE, size_t MSG_SIZE>
+bool bsp_usart<BUFFER_SIZE, MSG_SIZE>::register_instance()
+{
+  // 检查是否已满
+  if (_instance_count >= MAX_INSTANCES)
+  {
+    return false; // 注册表已满
+  }
+
+  // 将当前实例添加到注册表中
+  _instances[_instance_count] = this;
+  _instance_count++;
+
+  return true;
+}
+
+// 通过UART句柄查找对应的实例
+template <size_t BUFFER_SIZE, size_t MSG_SIZE>
+bsp_usart<BUFFER_SIZE, MSG_SIZE> *bsp_usart<BUFFER_SIZE, MSG_SIZE>::get_instance_by_handle(UART_HandleTypeDef *huart)
+{
+  // 遍历注册表，查找匹配的UART句柄
+  for (size_t i = 0; i < _instance_count; i++)
+  {
+    if (_instances[i] != nullptr && _instances[i]->get_huart() == huart)
+    {
+      return _instances[i]; // 找到对应的实例
+    }
+  }
+
+  return nullptr; // 未找到对应的实例
 }
