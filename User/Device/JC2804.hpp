@@ -201,9 +201,9 @@ private:
     ERROR_INFO_REQUEST
   };
 
-  RequestType _last_request_type;
-  bsp_can*    _can;
-  MotorData   latest_data;    // 最新数据存储（使用结构体）
+  RequestType     _last_request_type;
+  bsp_can*       _can;
+  MotorData       latest_data; // 最新数据存储（使用结构体）
 
 
   /* 私有辅助函数 */
@@ -229,7 +229,6 @@ private:
 
   // 解析数据
   void store_received_data(uint8_t* data);
-
 };
 
 

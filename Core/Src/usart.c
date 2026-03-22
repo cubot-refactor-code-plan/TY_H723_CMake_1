@@ -686,7 +686,7 @@ void HAL_UART_MspInit(UART_HandleTypeDef* uartHandle)
     hdma_uart9_tx.Init.Mode = DMA_NORMAL;
     hdma_uart9_tx.Init.Priority = DMA_PRIORITY_LOW;
     hdma_uart9_tx.Init.FIFOMode = DMA_FIFOMODE_ENABLE;
-    hdma_uart9_tx.Init.FIFOThreshold = DMA_FIFO_THRESHOLD_FULL;
+    hdma_uart9_tx.Init.FIFOThreshold = DMA_FIFO_THRESHOLD_HALFFULL;
     hdma_uart9_tx.Init.MemBurst = DMA_MBURST_SINGLE;
     hdma_uart9_tx.Init.PeriphBurst = DMA_PBURST_SINGLE;
     if (HAL_DMA_Init(&hdma_uart9_tx) != HAL_OK)
@@ -745,7 +745,7 @@ void HAL_UART_MspInit(UART_HandleTypeDef* uartHandle)
     hdma_usart1_tx.Init.Mode = DMA_NORMAL;
     hdma_usart1_tx.Init.Priority = DMA_PRIORITY_LOW;
     hdma_usart1_tx.Init.FIFOMode = DMA_FIFOMODE_ENABLE;
-    hdma_usart1_tx.Init.FIFOThreshold = DMA_FIFO_THRESHOLD_FULL;
+    hdma_usart1_tx.Init.FIFOThreshold = DMA_FIFO_THRESHOLD_HALFFULL;
     hdma_usart1_tx.Init.MemBurst = DMA_MBURST_SINGLE;
     hdma_usart1_tx.Init.PeriphBurst = DMA_PBURST_SINGLE;
     if (HAL_DMA_Init(&hdma_usart1_tx) != HAL_OK)
@@ -765,10 +765,7 @@ void HAL_UART_MspInit(UART_HandleTypeDef* uartHandle)
     hdma_usart1_rx.Init.MemDataAlignment = DMA_MDATAALIGN_BYTE;
     hdma_usart1_rx.Init.Mode = DMA_NORMAL;
     hdma_usart1_rx.Init.Priority = DMA_PRIORITY_LOW;
-    hdma_usart1_rx.Init.FIFOMode = DMA_FIFOMODE_ENABLE;
-    hdma_usart1_rx.Init.FIFOThreshold = DMA_FIFO_THRESHOLD_FULL;
-    hdma_usart1_rx.Init.MemBurst = DMA_MBURST_SINGLE;
-    hdma_usart1_rx.Init.PeriphBurst = DMA_PBURST_SINGLE;
+    hdma_usart1_rx.Init.FIFOMode = DMA_FIFOMODE_DISABLE;
     if (HAL_DMA_Init(&hdma_usart1_rx) != HAL_OK)
     {
       Error_Handler();
@@ -893,7 +890,7 @@ void HAL_UART_MspInit(UART_HandleTypeDef* uartHandle)
     hdma_usart6_tx.Init.Mode = DMA_NORMAL;
     hdma_usart6_tx.Init.Priority = DMA_PRIORITY_LOW;
     hdma_usart6_tx.Init.FIFOMode = DMA_FIFOMODE_ENABLE;
-    hdma_usart6_tx.Init.FIFOThreshold = DMA_FIFO_THRESHOLD_FULL;
+    hdma_usart6_tx.Init.FIFOThreshold = DMA_FIFO_THRESHOLD_HALFFULL;
     hdma_usart6_tx.Init.MemBurst = DMA_MBURST_SINGLE;
     hdma_usart6_tx.Init.PeriphBurst = DMA_PBURST_SINGLE;
     if (HAL_DMA_Init(&hdma_usart6_tx) != HAL_OK)

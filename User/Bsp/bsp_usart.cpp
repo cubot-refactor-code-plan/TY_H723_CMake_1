@@ -5,7 +5,6 @@
 /* USER CODE BEGIN */
 
 /* 声明串口句柄 */
-extern UART_HandleTypeDef huart1;
 extern UART_HandleTypeDef huart6;
 extern UART_HandleTypeDef huart9;
 
@@ -40,13 +39,12 @@ __attribute__((section(".dma_buffer"))) bsp_usart<256, 8> bsp_usart9(&huart9, re
 template <size_t BUFFER_SIZE, size_t MSG_SIZE>
 bsp_usart<BUFFER_SIZE, MSG_SIZE> *bsp_usart<BUFFER_SIZE, MSG_SIZE>::_instances[bsp_usart<BUFFER_SIZE, MSG_SIZE>::MAX_INSTANCES] = {nullptr};
 
-template <size_t BUFFER_SIZE, size_t MSG_SIZE>
-size_t bsp_usart<BUFFER_SIZE, MSG_SIZE>::_instance_count = 0;
-
 /**
  * @brief 构造函数中自动注册实例
  * @note 在构造函数中调用register_instance，将当前实例注册到静态注册表中
  */
+template <size_t BUFFER_SIZE, size_t MSG_SIZE>
+size_t bsp_usart<BUFFER_SIZE, MSG_SIZE>::_instance_count = 0;
 
 
 extern "C"
@@ -503,7 +501,7 @@ void bsp_usart<BUFFER_SIZE, MSG_SIZE>::handle_tx_complete()
 
 // IDLE中断处理函数
 template <size_t BUFFER_SIZE, size_t MSG_SIZE>
-void bsp_usart<BUFFER_SIZE, MSG_SIZE>::           handle_idle_interrupt(uint32_t received_length)
+void bsp_usart<BUFFER_SIZE, MSG_SIZE>::handle_idle_interrupt(uint32_t received_length)
 {
   _last_received_length = received_length;
 
@@ -559,7 +557,7 @@ void bsp_usart<BUFFER_SIZE, MSG_SIZE>::           handle_idle_interrupt(uint32_t
       else // DOUBLE_BUFFER
       {
         // 修复：先获取当前使用的缓冲区，再切换
-        target_buffer   = _current_buffer ? _rx_stream_buffers[1] : _rx_stream_buffers[0];
+        target_buffer = _current_buffer ? _rx_stream_buffers[1] : _rx_stream_buffers[0];
       }
 
       // 1. 停止当前 DMA 传输，确保状态干净

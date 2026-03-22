@@ -27,7 +27,6 @@
 /* SVC */
 #include "protocol_usart.hpp"
 
-
 /**
  * @brief main中初始化（无freertos）
  * @note  也就是在main.c中写了一个函数调用，这样转嫁就可以使用cpp了
@@ -101,13 +100,12 @@ extern "C" void _defaultTask(void *argument)
   printf("Default Task Started\n");
   osDelay(1000);
 
-  uint8_t data[8] = {0};
+  uint8_t data[8] = {0x01,0x02,0x03};
   for (;;)
   {
-    bsp_usart6.receive(data,8);
-    bsp_usart6.send(data,8);
-    osDelay(1);
-    // motor_pitch.set_low_speed(0);
+    bsp_can1.send(0x602,data,3);
+    osDelay(100);
+    
   }
 }
 
