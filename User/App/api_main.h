@@ -1,5 +1,5 @@
 /**
- * @file api_main.cpp
+ * @file api_main.h
  * @author Rh
  * @brief 应用层与STM32的接口，放置最直接运行的任务
  * @version 0.1
@@ -23,32 +23,32 @@ extern "C"
 {
 #endif
 
-/* ==================== 初始化函数 ==================== */
+  /* ==================== 初始化函数 ==================== */
 
-/**
- * @brief 主应用程序初始化（非FreeRTOS）
- */
-void app_init(void);
+  /**
+   * @brief 主应用程序初始化（非FreeRTOS）
+   */
+  void app_init(void);
 
-/**
- * @brief FreeRTOS相关初始化
- */
-void freertos_init(void);
+  /**
+   * @brief FreeRTOS相关初始化
+   */
+  void freertos_init(void);
 
 
-/* ==================== 任务函数声明 ==================== */
+  /* ==================== 任务函数声明 ==================== */
 
-/**
- * @brief 默认任务
- * @param argument 任务参数
- */
-void _defaultTask(void *argument);
+  /**
+   * @brief 默认任务
+   * @param argument 任务参数
+   */
+  void _defaultTask(void *argument);
 
-/**
- * @brief CAN接收后处理任务
- * @param argument 任务参数
- */
-void _can_rx_handler_task(void *argument);
+  /**
+   * @brief CAN接收后处理任务
+   * @param argument 任务参数
+   */
+  void _can_rx_handler_task(void *argument);
 
 
 #ifdef __cplusplus

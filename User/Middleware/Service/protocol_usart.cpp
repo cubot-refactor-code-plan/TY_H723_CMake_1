@@ -1,7 +1,9 @@
 #include "bsp_usart.hpp"
+#include "protocol_maixcam.hpp"
 #include "protocol_usart.hpp"
 #include "string.h"
 #include <stdio.h>
+
 
 
 /* USER CODE BEGIN */
@@ -15,7 +17,8 @@ static inline void protocol_usart_callback(protocol_usart* p_usart)
 {
   if (p_usart == &protocal_usart_9)
   {
-    // 执行逻辑
+    /* 调用MaixCam协议解析函数 */
+    maixcam.parse(p_usart->get_rx_cmd(), p_usart->get_rx_data(), p_usart->get_rx_len());
   }
 }
 

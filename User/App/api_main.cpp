@@ -3,14 +3,19 @@
 #include "main.h" // IWYU pragma: keep
 #include "stdio.h"
 
+
 /* BSP */
 #include "bsp_usart.hpp"
+
 
 /* DVC */
 #include "jc2804.hpp"
 
+
 /* SVC */
 #include "protocol_usart.hpp"
+
+#include "protocol_maixcam.hpp"
 
 
 /**
@@ -27,7 +32,7 @@ void app_init()
 
 /* ==================== 任务句柄定义 ==================== */
 
-osThreadId_t         can_rx_task_handle;              ///< CAN接收后处理任务句柄
+osThreadId_t         can_rx_task_handle; ///< CAN接收后处理任务句柄
 const osThreadAttr_t can_rx_handler_task_attributes = {
   .name       = "can_rx_task",
   .stack_size = 128 * 4,
@@ -49,8 +54,11 @@ void freertos_init()
   bsp_usart9.init();
   bsp_can1.init();
 
-  /* 初始化协议层 */
+  /* 初始化协议层（需要在maixcam之前初始化） */
   protocal_usart_9.init();
+
+  /* 初始化MaixCam协议（内部会调用protocal_usart_9） */
+  maixcam.init();
 
   /* 初始化设备 */
 

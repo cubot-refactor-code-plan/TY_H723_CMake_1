@@ -126,6 +126,33 @@ public:
    * @param len 数据长度
    */
   void send(uint8_t cmd, uint8_t* data, uint8_t len);
+
+  /**
+   * @brief 获取接收到的帧命令码
+   * @return uint8_t 命令码
+   */
+  uint8_t get_rx_cmd()
+  {
+    return rx_frame.cmd;
+  }
+
+  /**
+   * @brief 获取接收到的帧数据长度
+   * @return uint8_t 数据长度
+   */
+  uint8_t get_rx_len()
+  {
+    return rx_frame.len;
+  }
+
+  /**
+   * @brief 获取接收到的帧数据指针
+   * @return uint8_t* 数据指针
+   */
+  uint8_t* get_rx_data()
+  {
+    return rx_frame.data;
+  }
 };
 
 
